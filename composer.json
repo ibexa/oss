@@ -61,11 +61,9 @@
         "sensiolabs/security-checker": "^6.0",
         "twig/extra-bundle": "^3.0"
     },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "security-checker security:check": "script"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.3.x-dev"
         }
     }
 }
