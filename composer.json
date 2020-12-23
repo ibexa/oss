@@ -2,7 +2,7 @@
     "name": "ibexa/oss",
     "type": "metapackage",
     "license": "GPL-2.0-only",
-    "description": "A meta package for installing Ibexa Platform",
+    "description": "A meta package for installing Ibexa Open Source",
     "require": {
         "php": "^7.3",
         "ext-ctype": "*",
