@@ -4,16 +4,16 @@ This is a metapackage for Symfony Flex-based Ibexa Open Source installation.
 
 ## Installation
 
-1. Create a new project from [ibexa/website-skeleton](https://github.com/ibexa/website-skeleton).
+1. Create a new project from [ibexa/website-skeleton](https://github.com/ibexa/website-skeleton):
     ```
     composer create-project ibexa/website-skeleton ibexa_website
     ```
-1. Require `ibexa-oss` package
+1. Require `ibexa-oss` package:
     ```
     composer require ibexa-oss
     ```
 
-Learn more about our commercial Product - [Ibexa DXP](https://www.ibexa.co/products).
+Learn more about our commercial product - [Ibexa DXP](https://www.ibexa.co/products).
 
 ## COPYRIGHT
 Copyright (C) 1999-2020 Ibexa AS (formerly eZ Systems AS). All rights reserved.
