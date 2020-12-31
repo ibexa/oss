@@ -16,7 +16,7 @@ This is a metapackage for Symfony Flex-based Ibexa Open Source installation.
 Learn more about our commercial product - [Ibexa DXP](https://www.ibexa.co/products).
 
 ## COPYRIGHT
-Copyright (C) 1999-2020 Ibexa AS (formerly eZ Systems AS). All rights reserved.
+Copyright (C) 1999-2021 Ibexa AS (formerly eZ Systems AS). All rights reserved.
 
 ## LICENSE
 This source code is available separately under the following licenses:
