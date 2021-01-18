@@ -27,6 +27,7 @@
         "ezsystems/ezplatform-solr-search-engine": "^3.3.x-dev",
         "ezsystems/ezplatform-standard-design": "^0.4.x-dev",
         "ezsystems/ezplatform-user": "^2.3.x-dev",
+        "ibexa/post-install": "^1.0.x-dev",
         "symfony/asset": "^5.2.1",
         "symfony/cache": "^5.2.1",
         "symfony/console": "^5.2.1",
