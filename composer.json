@@ -59,7 +59,6 @@
         "php-http/guzzle6-adapter": "^2.0.1",
         "platformsh/symfonyflex-bridge": "^2.4",
         "sensio/framework-extra-bundle": "^5.6.1",
-        "sensiolabs/security-checker": "^6.0.3",
         "twig/extra-bundle": "^3.1.1"
     },
     "extra": {
