@@ -10,7 +10,7 @@ This is a metapackage for Symfony Flex-based Ibexa Open Source installation.
     ```
 1. Require `ibexa-oss` package:
     ```
-    composer require ibexa-oss
+    composer require ibexa/oss
     ```
 
 Learn more about our commercial product - [Ibexa DXP](https://www.ibexa.co/products).
