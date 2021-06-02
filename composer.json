@@ -59,7 +59,8 @@
         "php-http/guzzle6-adapter": "^2.0.1",
         "platformsh/symfonyflex-bridge": "^2.4",
         "sensio/framework-extra-bundle": "^5.6.1",
-        "twig/extra-bundle": "^3.1.1"
+        "twig/extra-bundle": "^3.1.1",
+        "doctrine/doctrine-bundle": "~2.3.2"
     },
     "conflict": {
         "symfony/framework-bundle": "5.2.6"
