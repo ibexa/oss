@@ -63,6 +63,7 @@
         "doctrine/doctrine-bundle": "~2.3.2"
     },
     "conflict": {
+        "lexik/jwt-authentication-bundle": "2.12.0",
         "symfony/framework-bundle": "5.2.6"
     },
     "extra": {
