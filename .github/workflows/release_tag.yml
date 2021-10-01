@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-      - '!v*-alpha*'
 
 jobs:
   provide_changed_packages:
@@ -26,11 +25,20 @@ jobs:
           OUT=$(jq --slurp '[.[].packages[] | select(.name | contains("ezsystems") or contains("ibexa")) | [.name, .version] | { name: (.[0]), version: .[1] }]' composer.lock)
           echo "::set-output name=lock::$( echo "$OUT" | sed ':a;N;$!ba;s/\n/%0A/g' )"
 
+      - name: Get previous last full release
+        id: prevfull
+        run: |
+          OUT=$(hub api /repos/${{ github.repository }}/releases | jq -r -s '[ .[][].tag_name | select(. | contains("rc") or contains("beta") or contains("alpha") | not) ] | first')
+          echo "::set-output name=tag::$( echo "$OUT" | sed ':a;N;$!ba;s/\n/%0A/g' )"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Get previous release tag based on type
         id: prevrelease
         uses: ibexa/version-logic-action@master
         with:
           currentTag: ${{ env.BUILD_TAG }}
+          prevFullTag: ${{ steps.prevfull.outputs.tag }}
 
       # checkout previous tag
       - uses: actions/checkout@v2
@@ -62,7 +70,7 @@ jobs:
           # Step 3: Select only those bundles that have more than 1 version in .versions
           # Step 4: Sort versions
           # Step 5: (outer brackets) Wrap that into JSON list of objects
-          # Note: zzzz is added as an additional suffix to properly sorl out alpha/beta/etc pre-releases (v2.5.1-alphazzzz < v2.5.1zzzz)
+          # Note: zzzz is added as an additional suffix to properly sort out alpha/beta/etc pre-releases (v2.5.1-alphazzzz < v2.5.1zzzz)
           OUT=$(jq -s 'flatten | group_by(.name)' $FILE1 $FILE2 | jq -s '[ .[][] | {name: (.[0].name), versions: [ .[0].version, .[1].version ] | unique} | select(.versions | length > 1) ] | .[].versions |= sort_by( . + "zzzz" | [scan("[0-9]+|[a-z]+")] | map(tonumber? // .) )')
           echo "::set-output name=matrix::$( echo "$OUT" | sed ':a;N;$!ba;s/\n/%0A/g' )"
 
