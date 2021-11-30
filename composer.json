@@ -63,7 +63,7 @@
         "doctrine/doctrine-bundle": "^2.4.2"
     },
     "require-dev": {
-        "ibexa/ci-scripts": "^0.1@dev"
+        "ibexa/ci-scripts": "^0.2@dev"
     },
     "conflict": {
         "lexik/jwt-authentication-bundle": "2.12.0",
