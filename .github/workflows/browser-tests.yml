@@ -1,12 +1,9 @@
 name: Browser tests
 on:
-    schedule:
-        # Run tests every night
-        - cron: "0 0 * * *"
     workflow_dispatch: ~
     push:
         branches:
-            - main
+            - master
             - "[0-9]+.[0-9]+"
     pull_request: ~
 
