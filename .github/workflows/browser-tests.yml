@@ -1,8 +1,5 @@
 name: Browser tests
 on:
-    schedule:
-        # Run tests every night
-        - cron: "0 0 * * *"
     workflow_dispatch: ~
     push:
         branches:
