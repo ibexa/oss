@@ -11,7 +11,7 @@
         "ibexa/doctrine-schema": "^4.0.x-dev",
         "ibexa/system-info": "^4.0.x-dev",
         "ibexa/admin-ui": "^4.0.x-dev",
-        "ibexa/admin-ui-assets": "4.0.0-alpha1",
+        "ibexa/admin-ui-assets": "^4.0@beta",
         "ibexa/content-forms": "^4.0.x-dev",
         "ibexa/core": "^4.0.x-dev",
         "ibexa/cron": "^4.0.x-dev",
