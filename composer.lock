@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11bac00581329d7fda352bc6ee1cb466",
+    "content-hash": "f37ef7f3846edb045cc07ee32c2503a3",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -2435,28 +2435,28 @@
         },
         {
             "name": "ibexa/admin-ui",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/admin-ui.git",
-                "reference": "7f26e0c8b82943003f2b15c3bf75d653ebcc419a"
+                "reference": "d8de4ea28ee8e39beec990a556604c95e2f906e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/admin-ui/zipball/7f26e0c8b82943003f2b15c3bf75d653ebcc419a",
-                "reference": "7f26e0c8b82943003f2b15c3bf75d653ebcc419a",
+                "url": "https://api.github.com/repos/ibexa/admin-ui/zipball/d8de4ea28ee8e39beec990a556604c95e2f906e4",
+                "reference": "d8de4ea28ee8e39beec990a556604c95e2f906e4",
                 "shasum": ""
             },
             "require": {
                 "babdev/pagerfanta-bundle": "^2.1",
                 "ext-json": "*",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
-                "ezsystems/ezplatform-user": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
+                "ezsystems/ezplatform-user": "^4.0",
                 "jms/translation-bundle": "^1.5",
                 "knplabs/knp-menu-bundle": "^3.0",
                 "mck89/peast": "^1.9",
@@ -2486,16 +2486,15 @@
                 "ezsystems/ezplatform-admin-ui": "*"
             },
             "require-dev": {
-                "ezsystems/behatbundle": "^9.0@dev",
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/behatbundle": "^9.0",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^1.0",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
+                "ezsystems/ezplatform-http-cache": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.0",
                 "phpunit/phpunit": "^8.1"
             },
-            "default-branch": true,
             "type": "project",
             "extra": {
                 "branch-alias": {
@@ -2521,9 +2520,9 @@
             "description": "Ibexa Admin Ui",
             "support": {
                 "issues": "https://github.com/ibexa/admin-ui/issues",
-                "source": "https://github.com/ibexa/admin-ui/tree/main"
+                "source": "https://github.com/ibexa/admin-ui/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T06:17:14+00:00"
+            "time": "2021-12-03T15:26:16+00:00"
         },
         {
             "name": "ibexa/admin-ui-assets",
@@ -2577,7 +2576,7 @@
         },
         {
             "name": "ibexa/compatibility-layer",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/compatibility-layer.git",
@@ -2610,7 +2609,6 @@
                 "phpunit/phpunit": "^9.5.10",
                 "symfony/var-dumper": "^5.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2636,21 +2634,21 @@
         },
         {
             "name": "ibexa/content-forms",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/content-forms.git",
-                "reference": "dcb894314a3f51a68c99c8a2711102c5c1ae88c9"
+                "reference": "552f21998ebbc38e24e1500774f84c326ba64c52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/content-forms/zipball/dcb894314a3f51a68c99c8a2711102c5c1ae88c9",
-                "reference": "dcb894314a3f51a68c99c8a2711102c5c1ae88c9",
+                "url": "https://api.github.com/repos/ibexa/content-forms/zipball/552f21998ebbc38e24e1500774f84c326ba64c52",
+                "reference": "552f21998ebbc38e24e1500774f84c326ba64c52",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "jms/translation-bundle": "^1.5",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
@@ -2671,17 +2669,16 @@
             },
             "require-dev": {
                 "behat/behat": "^3.5",
-                "ezsystems/behatbundle": "^9.0@dev",
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/behatbundle": "^9.0",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.0",
                 "phpunit/phpunit": "^8.2"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -2705,22 +2702,22 @@
             "description": "Use Symfony Forms with Ibexa Content & User objects",
             "support": {
                 "issues": "https://github.com/ibexa/content-forms/issues",
-                "source": "https://github.com/ibexa/content-forms/tree/main"
+                "source": "https://github.com/ibexa/content-forms/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-02T07:50:05+00:00"
+            "time": "2021-12-03T15:26:34+00:00"
         },
         {
             "name": "ibexa/core",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/core.git",
-                "reference": "0b37bd9bdf4af01ca0d259cd6fb542839050aa24"
+                "reference": "213f99ec86292dcd4df653588d5512d759d4f9ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/core/zipball/0b37bd9bdf4af01ca0d259cd6fb542839050aa24",
-                "reference": "0b37bd9bdf4af01ca0d259cd6fb542839050aa24",
+                "url": "https://api.github.com/repos/ibexa/core/zipball/213f99ec86292dcd4df653588d5512d759d4f9ab",
+                "reference": "213f99ec86292dcd4df653588d5512d759d4f9ab",
                 "shasum": ""
             },
             "require": {
@@ -2741,7 +2738,7 @@
                 "friendsofsymfony/http-cache-bundle": "^2.8",
                 "friendsofsymfony/jsrouting-bundle": "^2.5",
                 "guzzlehttp/guzzle": "^6.5",
-                "ibexa/doctrine-schema": "^4.0@dev",
+                "ibexa/doctrine-schema": "^4.0",
                 "jms/translation-bundle": "^1.5",
                 "liip/imagine-bundle": "^2.3",
                 "nelmio/cors-bundle": "^2.0",
@@ -2788,7 +2785,7 @@
             "require-dev": {
                 "behat/behat": "^3.6.1",
                 "friends-of-behat/mink-extension": "^2.4",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "ibexa/code-style": "^1.0",
                 "jenner/simple_fork": "^1.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
@@ -2799,7 +2796,6 @@
             "suggest": {
                 "php-64bit": "For support of more than 30 languages, a 64bit php installation on all involved prod/dev machines is required"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2844,27 +2840,27 @@
             "description": "Ibexa DXP and Open Source core. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "https://ibexa.co",
             "support": {
-                "source": "https://github.com/ibexa/core/tree/main"
+                "source": "https://github.com/ibexa/core/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T14:17:57+00:00"
+            "time": "2021-12-03T15:27:36+00:00"
         },
         {
             "name": "ibexa/cron",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/cron.git",
-                "reference": "6cc97f925631cba51bc9db18a655ae1a1dfe466f"
+                "reference": "54eb079f2ab534900d3ded5e29492249ae485103"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/cron/zipball/6cc97f925631cba51bc9db18a655ae1a1dfe466f",
-                "reference": "6cc97f925631cba51bc9db18a655ae1a1dfe466f",
+                "url": "https://api.github.com/repos/ibexa/cron/zipball/54eb079f2ab534900d3ded5e29492249ae485103",
+                "reference": "54eb079f2ab534900d3ded5e29492249ae485103",
                 "shasum": ""
             },
             "require": {
                 "cron/cron": "^1.4",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
                 "symfony/console": "^5.0",
@@ -2877,12 +2873,11 @@
                 "ezsystems/ezstudio-cron": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.2.0",
                 "friendsofphp/php-cs-fixer": "^2.16.3",
                 "phpunit/phpunit": "^6.4 || ^7.0"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -2911,26 +2906,26 @@
             "homepage": "https://github.com/ezsystems/ezplatform-cron",
             "support": {
                 "issues": "https://github.com/ibexa/cron/issues",
-                "source": "https://github.com/ibexa/cron/tree/main"
+                "source": "https://github.com/ibexa/cron/tree/v4.0.0-beta2"
             },
-            "time": "2021-11-09T12:54:22+00:00"
+            "time": "2021-12-03T15:26:38+00:00"
         },
         {
             "name": "ibexa/design-engine",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/design-engine.git",
-                "reference": "f79b79a0be3297a3b68a298fb0c5462276c5bbb5"
+                "reference": "d73e7663ad27378f5dba34c2f5afda6e1df6d633"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/design-engine/zipball/f79b79a0be3297a3b68a298fb0c5462276c5bbb5",
-                "reference": "f79b79a0be3297a3b68a298fb0c5462276c5bbb5",
+                "url": "https://api.github.com/repos/ibexa/design-engine/zipball/d73e7663ad27378f5dba34c2f5afda6e1df6d633",
+                "reference": "d73e7663ad27378f5dba34c2f5afda6e1df6d633",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "symfony/asset": "^5.0",
                 "symfony/config": "^5.0",
                 "symfony/dependency-injection": "^5.0",
@@ -2948,12 +2943,11 @@
                 "ezsystems/ezplatform-design-engine": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "friendsofphp/php-cs-fixer": "~2.15.3",
                 "mikey179/vfsstream": "^1.6",
                 "phpunit/phpunit": "^8.1"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -2986,13 +2980,13 @@
             "description": "Design fallback mechanism for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/design-engine/issues",
-                "source": "https://github.com/ibexa/design-engine/tree/main"
+                "source": "https://github.com/ibexa/design-engine/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:11:57+00:00"
+            "time": "2021-12-03T15:26:42+00:00"
         },
         {
             "name": "ibexa/doctrine-schema",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/doctrine-schema.git",
@@ -3019,7 +3013,6 @@
                 "ezsystems/ezplatform-code-style": "^2.0.0",
                 "phpunit/phpunit": "^8.5"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3048,24 +3041,24 @@
         },
         {
             "name": "ibexa/fieldtype-matrix",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-matrix.git",
-                "reference": "94b55e9be59d6aa74e6d3558f2b672ae55ad08ed"
+                "reference": "c698b8a428ebc106431571b5430017285027fe89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-matrix/zipball/94b55e9be59d6aa74e6d3558f2b672ae55ad08ed",
-                "reference": "94b55e9be59d6aa74e6d3558f2b672ae55ad08ed",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-matrix/zipball/c698b8a428ebc106431571b5430017285027fe89",
+                "reference": "c698b8a428ebc106431571b5430017285027fe89",
                 "shasum": ""
             },
             "require": {
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-graphql": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-graphql": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
                 "symfony/console": "^5.0",
@@ -3079,20 +3072,19 @@
                 "ezsystems/ezplatform-matrix-fieldtype": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
-                "ezsystems/ezplatform-admin-ui": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
+                "ezsystems/ezplatform-admin-ui": "^4.0",
                 "ezsystems/ezplatform-code-style": "^1.0",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
-                "ezsystems/ezplatform-user": "^4.0@dev",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
+                "ezsystems/ezplatform-user": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "phpunit/phpunit": "^6.4"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3114,31 +3106,31 @@
             "description": "Repository dedicated to Matrix Field Type for eZ Platform",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-matrix/issues",
-                "source": "https://github.com/ibexa/fieldtype-matrix/tree/main"
+                "source": "https://github.com/ibexa/fieldtype-matrix/tree/v4.0.0-beta2"
             },
-            "time": "2021-11-15T14:22:27+00:00"
+            "time": "2021-12-03T15:27:40+00:00"
         },
         {
             "name": "ibexa/fieldtype-query",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-query.git",
-                "reference": "51148a0c2bc442a088f3cd586b86c86b6badc1f1"
+                "reference": "929f5e670339033e7df0fc0a39037cc63969fd4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-query/zipball/51148a0c2bc442a088f3cd586b86c86b6badc1f1",
-                "reference": "51148a0c2bc442a088f3cd586b86c86b6badc1f1",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-query/zipball/929f5e670339033e7df0fc0a39037cc63969fd4e",
+                "reference": "929f5e670339033e7df0fc0a39037cc63969fd4e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "ezsystems/ezplatform-admin-ui": "^4.0@dev",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-graphql": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
+                "ezsystems/ezplatform-admin-ui": "^4.0",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-graphql": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
                 "php": "^7.3",
                 "psr/log": "^1.1",
                 "symfony/dependency-injection": "^5.0",
@@ -3153,17 +3145,16 @@
                 "ezsystems/ezplatform-query-fieldtype": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
-                "ezsystems/ezplatform-user": "^4.0@dev",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
+                "ezsystems/ezplatform-user": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
                 "phpspec/phpspec": "^6.0"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3195,32 +3186,32 @@
             "description": "Ibexa Field Type that defines a query.",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-query/issues",
-                "source": "https://github.com/ibexa/fieldtype-query/tree/main"
+                "source": "https://github.com/ibexa/fieldtype-query/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T10:29:42+00:00"
+            "time": "2021-12-03T15:28:06+00:00"
         },
         {
             "name": "ibexa/fieldtype-richtext",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-richtext.git",
-                "reference": "8e450f67ec8d16656ee81e2afa975ea377894123"
+                "reference": "0a615ab2e1d41912c97940403e5b081562f7e85f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-richtext/zipball/8e450f67ec8d16656ee81e2afa975ea377894123",
-                "reference": "8e450f67ec8d16656ee81e2afa975ea377894123",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-richtext/zipball/0a615ab2e1d41912c97940403e5b081562f7e85f",
+                "reference": "0a615ab2e1d41912c97940403e5b081562f7e85f",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xsl": "*",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
                 "php": "^7.3",
                 "symfony/asset": "^5.1",
                 "symfony/cache": "^5.0",
@@ -3241,16 +3232,15 @@
                 "ezsystems/ezplatform-richtext": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^1.0",
                 "friendsofphp/php-cs-fixer": "^2.16",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-config-test": "^4.1",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
                 "phpunit/phpunit": "^8.5",
                 "symfony/finder": "^5.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3274,31 +3264,31 @@
             "description": "Ibexa RichText Extension, including the RichText FieldType.",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-richtext/issues",
-                "source": "https://github.com/ibexa/fieldtype-richtext/tree/main"
+                "source": "https://github.com/ibexa/fieldtype-richtext/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T14:10:32+00:00"
+            "time": "2021-12-03T15:28:17+00:00"
         },
         {
             "name": "ibexa/graphql",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/graphql.git",
-                "reference": "7aae03e360932eaf34e62359f18251e976fe2e7b"
+                "reference": "2203450af2027de08f1c868c4203aa12d639e352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/graphql/zipball/7aae03e360932eaf34e62359f18251e976fe2e7b",
-                "reference": "7aae03e360932eaf34e62359f18251e976fe2e7b",
+                "url": "https://api.github.com/repos/ibexa/graphql/zipball/2203450af2027de08f1c868c4203aa12d639e352",
+                "reference": "2203450af2027de08f1c868c4203aa12d639e352",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.7",
                 "ext-dom": "*",
-                "ezsystems/ezplatform-admin-ui": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
+                "ezsystems/ezplatform-admin-ui": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
                 "lexik/jwt-authentication-bundle": "^2.8",
                 "overblog/graphql-bundle": "^0.12",
                 "php": "^7.3",
@@ -3316,19 +3306,18 @@
                 "ezsystems/ezplatform-graphql": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
-                "ezsystems/ezplatform-user": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
+                "ezsystems/ezplatform-user": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
                 "mikey179/vfsstream": "^1.6",
                 "overblog/graphiql-bundle": "^0.2",
                 "phpspec/phpspec": "^6.1"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3356,27 +3345,27 @@
             "description": "GraphQL server for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/graphql/issues",
-                "source": "https://github.com/ibexa/graphql/tree/main"
+                "source": "https://github.com/ibexa/graphql/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:25:00+00:00"
+            "time": "2021-12-03T15:26:58+00:00"
         },
         {
             "name": "ibexa/http-cache",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/http-cache.git",
-                "reference": "d4b7ba45a49011d9aef4b301c24d327eb9365929"
+                "reference": "02df8f471eda89b54db1ca73d17b6ec8839708c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/http-cache/zipball/d4b7ba45a49011d9aef4b301c24d327eb9365929",
-                "reference": "d4b7ba45a49011d9aef4b301c24d327eb9365929",
+                "url": "https://api.github.com/repos/ibexa/http-cache/zipball/02df8f471eda89b54db1ca73d17b6ec8839708c5",
+                "reference": "02df8f471eda89b54db1ca73d17b6ec8839708c5",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
                 "friendsofsymfony/http-cache": "^2.9",
                 "friendsofsymfony/http-cache-bundle": "^2.8",
                 "php": ">=7.3",
@@ -3395,16 +3384,15 @@
                 "ezsystems/ezplatform-http-cache": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
                 "phpspec/phpspec": "^6.1",
                 "phpunit/phpunit": "^8.5",
                 "symfony/phpunit-bridge": "^5.1"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3432,13 +3420,13 @@
             "description": "HTTP cache handling for Ibexa DXP.",
             "support": {
                 "issues": "https://github.com/ibexa/http-cache/issues",
-                "source": "https://github.com/ibexa/http-cache/tree/main"
+                "source": "https://github.com/ibexa/http-cache/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:15:19+00:00"
+            "time": "2021-12-03T15:27:02+00:00"
         },
         {
             "name": "ibexa/post-install",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/post-install.git",
@@ -3467,7 +3455,6 @@
                 "symfony/phpunit-bridge": "^5.2",
                 "symfony/process": "^5.2"
             },
-            "default-branch": true,
             "type": "composer-plugin",
             "extra": {
                 "branch-alias": {
@@ -3499,16 +3486,16 @@
         },
         {
             "name": "ibexa/rest",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/rest.git",
-                "reference": "1862f7590cd2753f58e3b01e819579bc544e09bf"
+                "reference": "e20ee5f7a8772c3c4b7d754c4a430ccd3499aaa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/rest/zipball/1862f7590cd2753f58e3b01e819579bc544e09bf",
-                "reference": "1862f7590cd2753f58e3b01e819579bc544e09bf",
+                "url": "https://api.github.com/repos/ibexa/rest/zipball/e20ee5f7a8772c3c4b7d754c4a430ccd3499aaa3",
+                "reference": "e20ee5f7a8772c3c4b7d754c4a430ccd3499aaa3",
                 "shasum": ""
             },
             "require": {
@@ -3517,7 +3504,7 @@
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
                 "ext-xmlwriter": "*",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "ibexa/templated-uri-bundle": "^3.2",
                 "lexik/jwt-authentication-bundle": "^2.8",
                 "php": "^7.3",
@@ -3537,17 +3524,16 @@
                 "ezsystems/ezplatform-rest": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
                 "nyholm/psr7": "^1.1",
                 "phpunit/phpunit": "^8.5",
                 "symfony/browser-kit": "^5.3",
                 "symfony/http-client": "^5.3"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3570,26 +3556,26 @@
             "description": "Ibexa REST bundle",
             "support": {
                 "issues": "https://github.com/ibexa/rest/issues",
-                "source": "https://github.com/ibexa/rest/tree/main"
+                "source": "https://github.com/ibexa/rest/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:35:40+00:00"
+            "time": "2021-12-03T15:28:10+00:00"
         },
         {
             "name": "ibexa/search",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/search.git",
-                "reference": "a3998c9a506d78a80228ed0018ff5f325994360f"
+                "reference": "e1d16560c18ee1c0c62613afa9b7cc965bfc3736"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/search/zipball/a3998c9a506d78a80228ed0018ff5f325994360f",
-                "reference": "a3998c9a506d78a80228ed0018ff5f325994360f",
+                "url": "https://api.github.com/repos/ibexa/search/zipball/e1d16560c18ee1c0c62613afa9b7cc965bfc3736",
+                "reference": "e1d16560c18ee1c0c62613afa9b7cc965bfc3736",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "pagerfanta/pagerfanta": "^2.1",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
@@ -3603,12 +3589,11 @@
                 "ezsystems/ezplatform-search": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1",
                 "friendsofphp/php-cs-fixer": "^2.16",
                 "phpunit/phpunit": "^8.5"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3631,27 +3616,27 @@
             "description": "Ibexa DXP Search bundle",
             "support": {
                 "issues": "https://github.com/ibexa/search/issues",
-                "source": "https://github.com/ibexa/search/tree/main"
+                "source": "https://github.com/ibexa/search/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-02T07:54:10+00:00"
+            "time": "2021-12-03T15:28:22+00:00"
         },
         {
             "name": "ibexa/solr",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/solr.git",
-                "reference": "407c136f8bc95ec567ccd2465f008f1d5ecaad26"
+                "reference": "dd4ae730bea8cdbdf59b0b93a955491e0ea6ce9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/solr/zipball/407c136f8bc95ec567ccd2465f008f1d5ecaad26",
-                "reference": "407c136f8bc95ec567ccd2465f008f1d5ecaad26",
+                "url": "https://api.github.com/repos/ibexa/solr/zipball/dd4ae730bea8cdbdf59b0b93a955491e0ea6ce9b",
+                "reference": "dd4ae730bea8cdbdf59b0b93a955491e0ea6ce9b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "netgen/query-translator": "^1.0.2",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
@@ -3664,12 +3649,11 @@
                 "ezsystems/ezplatform-solr-search-engine": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
                 "phpunit/phpunit": "^8.2"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3700,41 +3684,40 @@
             "description": "Solr search engine implementation for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/solr/issues",
-                "source": "https://github.com/ibexa/solr/tree/main"
+                "source": "https://github.com/ibexa/solr/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:17:33+00:00"
+            "time": "2021-12-03T15:28:36+00:00"
         },
         {
             "name": "ibexa/standard-design",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/standard-design.git",
-                "reference": "0fed7b714f44edd3b59ef6aa677fd7a671664c6c"
+                "reference": "0fd28f9a863757cfd8c328099e3dfc496056d26e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/standard-design/zipball/0fed7b714f44edd3b59ef6aa677fd7a671664c6c",
-                "reference": "0fed7b714f44edd3b59ef6aa677fd7a671664c6c",
+                "url": "https://api.github.com/repos/ibexa/standard-design/zipball/0fd28f9a863757cfd8c328099e3dfc496056d26e",
+                "reference": "0fd28f9a863757cfd8c328099e3dfc496056d26e",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "symfony/http-kernel": "^5.0"
             },
             "replace": {
                 "ezsystems/ezplatform-standard-design": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
                 "friendsofphp/php-cs-fixer": "^2.16.1",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1",
                 "phpunit/phpunit": "^8.1"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3756,28 +3739,28 @@
             "description": "Ibexa Standard Design Bundle",
             "support": {
                 "issues": "https://github.com/ibexa/standard-design/issues",
-                "source": "https://github.com/ibexa/standard-design/tree/main"
+                "source": "https://github.com/ibexa/standard-design/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:41:31+00:00"
+            "time": "2021-12-03T15:28:40+00:00"
         },
         {
             "name": "ibexa/system-info",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/system-info.git",
-                "reference": "d952a1ee89c35eae2adb6bc6f16ec84e6cf7cb8d"
+                "reference": "b36f8aeca461f2385da6eec04f8d25bd42dc5cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/system-info/zipball/d952a1ee89c35eae2adb6bc6f16ec84e6cf7cb8d",
-                "reference": "d952a1ee89c35eae2adb6bc6f16ec84e6cf7cb8d",
+                "url": "https://api.github.com/repos/ibexa/system-info/zipball/b36f8aeca461f2385da6eec04f8d25bd42dc5cc3",
+                "reference": "b36f8aeca461f2385da6eec04f8d25bd42dc5cc3",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "ezsystems/ezplatform-admin-ui": "^4.0@dev",
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-admin-ui": "^4.0",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "ocramius/proxy-manager": "^2.2",
                 "php": "^7.4",
                 "symfony/proxy-manager-bridge": "^5.0",
@@ -3787,21 +3770,20 @@
                 "ezsystems/ez-support-tools": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
-                "ezsystems/ezplatform-user": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
+                "ezsystems/ezplatform-user": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.0",
                 "phpunit/phpunit": "^8.2"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -3830,9 +3812,9 @@
             "description": "Providing information about the system Ibexa is running on, and Ibexa install itself",
             "support": {
                 "issues": "https://github.com/ibexa/system-info/issues",
-                "source": "https://github.com/ibexa/system-info/tree/main"
+                "source": "https://github.com/ibexa/system-info/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-03T13:23:52+00:00"
+            "time": "2021-12-03T15:23:55+00:00"
         },
         {
             "name": "ibexa/templated-uri-bundle",
@@ -3963,20 +3945,20 @@
         },
         {
             "name": "ibexa/user",
-            "version": "dev-main",
+            "version": "v4.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/user.git",
-                "reference": "fa8fdff86d2a1334ac4f7650825b7e744b30d80c"
+                "reference": "16a52c9aa2dd330da6a46bc1f52bf78c080bbae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/user/zipball/fa8fdff86d2a1334ac4f7650825b7e744b30d80c",
-                "reference": "fa8fdff86d2a1334ac4f7650825b7e744b30d80c",
+                "url": "https://api.github.com/repos/ibexa/user/zipball/16a52c9aa2dd330da6a46bc1f52bf78c080bbae5",
+                "reference": "16a52c9aa2dd330da6a46bc1f52bf78c080bbae5",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-kernel": "^4.0@dev",
+                "ezsystems/ezplatform-kernel": "^4.0",
                 "jms/translation-bundle": "^1.5",
                 "php": "^7.3",
                 "symfony/config": "^5.0",
@@ -3999,20 +3981,19 @@
                 "ezsystems/ezplatform-user": "*"
             },
             "require-dev": {
-                "ezsystems/doctrine-dbal-schema": "^4.0@dev",
+                "ezsystems/doctrine-dbal-schema": "^4.0",
                 "ezsystems/ezplatform-code-style": "^0.1.0",
-                "ezsystems/ezplatform-content-forms": "^4.0@dev",
-                "ezsystems/ezplatform-design-engine": "^4.0@dev",
-                "ezsystems/ezplatform-http-cache": "^4.0@dev",
-                "ezsystems/ezplatform-rest": "^4.0@dev",
-                "ezsystems/ezplatform-richtext": "^4.0@dev",
-                "ezsystems/ezplatform-search": "^4.0@dev",
+                "ezsystems/ezplatform-content-forms": "^4.0",
+                "ezsystems/ezplatform-design-engine": "^4.0",
+                "ezsystems/ezplatform-http-cache": "^4.0",
+                "ezsystems/ezplatform-rest": "^4.0",
+                "ezsystems/ezplatform-richtext": "^4.0",
+                "ezsystems/ezplatform-search": "^4.0",
                 "friendsofphp/php-cs-fixer": "^2.16.0",
-                "ibexa/ci-scripts": "^0.2@dev",
+                "ibexa/ci-scripts": "^0.2",
                 "matthiasnoback/symfony-dependency-injection-test": "4.1",
                 "phpunit/phpunit": "^8.2"
             },
-            "default-branch": true,
             "type": "ibexa-bundle",
             "extra": {
                 "branch-alias": {
@@ -4035,9 +4016,9 @@
             "description": "Ibexa User bundle",
             "support": {
                 "issues": "https://github.com/ibexa/user/issues",
-                "source": "https://github.com/ibexa/user/tree/main"
+                "source": "https://github.com/ibexa/user/tree/v4.0.0-beta2"
             },
-            "time": "2021-12-02T07:54:58+00:00"
+            "time": "2021-12-03T15:28:44+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -13783,26 +13764,26 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ibexa/doctrine-schema": 20,
-        "ibexa/system-info": 20,
-        "ibexa/admin-ui": 20,
+        "ibexa/doctrine-schema": 10,
+        "ibexa/system-info": 10,
+        "ibexa/admin-ui": 10,
         "ibexa/admin-ui-assets": 10,
-        "ibexa/content-forms": 20,
-        "ibexa/core": 20,
-        "ibexa/cron": 20,
-        "ibexa/design-engine": 20,
-        "ibexa/fieldtype-matrix": 20,
-        "ibexa/fieldtype-query": 20,
-        "ibexa/fieldtype-richtext": 20,
-        "ibexa/graphql": 20,
-        "ibexa/http-cache": 20,
-        "ibexa/post-install": 20,
-        "ibexa/rest": 20,
-        "ibexa/search": 20,
-        "ibexa/solr": 20,
-        "ibexa/standard-design": 20,
-        "ibexa/user": 20,
-        "ibexa/compatibility-layer": 20,
+        "ibexa/content-forms": 10,
+        "ibexa/core": 10,
+        "ibexa/cron": 10,
+        "ibexa/design-engine": 10,
+        "ibexa/fieldtype-matrix": 10,
+        "ibexa/fieldtype-query": 10,
+        "ibexa/fieldtype-richtext": 10,
+        "ibexa/graphql": 10,
+        "ibexa/http-cache": 10,
+        "ibexa/post-install": 10,
+        "ibexa/rest": 10,
+        "ibexa/search": 10,
+        "ibexa/solr": 10,
+        "ibexa/standard-design": 10,
+        "ibexa/user": 10,
+        "ibexa/compatibility-layer": 10,
         "ibexa/ci-scripts": 20
     },
     "prefer-stable": false,
