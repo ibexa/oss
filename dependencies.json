@@ -1,0 +1,8 @@
+[
+    {
+        "requirement": "dev-add-taxonomy-workaround as 9.0.x-dev",
+        "repositoryUrl": "https://github.com/ezsystems/BehatBundle",
+        "package": "ezsystems/behatbundle",
+        "shouldBeAddedAsVCS": false
+    }
+]
