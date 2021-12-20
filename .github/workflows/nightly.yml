@@ -1,0 +1,32 @@
+name: Nightly browser tests
+on:
+    schedule:
+        # Run tests every night
+        - cron: "45 21 * * *"
+    workflow_dispatch: ~
+
+jobs:
+    nightly:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            max-parallel: 1
+            matrix:
+                repository:
+                    - ibexa/oss
+                    - ibexa/content
+                    - ibexa/experience
+                    - ibexa/commerce
+                branch:
+                    - 3.3
+                    - master
+        steps:
+            - uses: octokit/request-action@v2.x
+              name: Trigger workflow
+              with:
+                  repository: ${{ matrix.repository }}
+                  workflow: "browser-tests.yml"
+                  ref: "!!str ${{ matrix.branch }}"
+                  route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
+              env:
+                  GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
