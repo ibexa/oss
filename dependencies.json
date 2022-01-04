@@ -1,0 +1,20 @@
+[
+    {
+        "requirement": "dev-ibx-1481_added_field_group_handling_during_field_addition as 8.3.x-dev",
+        "repositoryUrl": "https://github.com/ezsystems/BehatBundle",
+        "package": "ezsystems/behatbundle",
+        "shouldBeAddedAsVCS": false
+    },
+    {
+        "requirement": "dev-ibx-1481_added_behat_coverage_for_workflow_limitations as 2.3.x-dev",
+        "repositoryUrl": "https://github.com/ezsystems/ezplatform-workflow",
+        "package": "ezsystems/ezplatform-workflow",
+        "shouldBeAddedAsVCS": true
+    },
+    {
+        "requirement": "dev-ibx-1481_added_language_selection_coverage as 2.3.x-dev",
+        "repositoryUrl": "https://github.com/ezsystems/ezplatform-admin-ui",
+        "package": "ezsystems/ezplatform-admin-ui",
+        "shouldBeAddedAsVCS": false
+    }
+] 
