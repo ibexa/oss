@@ -66,6 +66,7 @@
         "ibexa/ci-scripts": "^0.2@dev"
     },
     "conflict": {
+        "gregwar/captcha-bundle": "2.1.6 || 2.1.7",
         "lexik/jwt-authentication-bundle": "2.12.0",
         "symfony/dependency-injection": "5.3.7"
     },
