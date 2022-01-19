@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afe6ebb13aa881050945f3d030d4f8cf",
+    "content-hash": "b1686aa8fdc241f77b21fc45d35cfc0f",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -2432,16 +2432,16 @@
         },
         {
             "name": "ibexa/admin-ui",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/admin-ui.git",
-                "reference": "ca93278ae943fc528f278415bb03dd11e7e06427"
+                "reference": "2aa653fa39d4a5eb750942e2fc3f557778242bf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/admin-ui/zipball/ca93278ae943fc528f278415bb03dd11e7e06427",
-                "reference": "ca93278ae943fc528f278415bb03dd11e7e06427",
+                "url": "https://api.github.com/repos/ibexa/admin-ui/zipball/2aa653fa39d4a5eb750942e2fc3f557778242bf2",
+                "reference": "2aa653fa39d4a5eb750942e2fc3f557778242bf2",
                 "shasum": ""
             },
             "require": {
@@ -2517,22 +2517,22 @@
             "description": "Ibexa Admin Ui",
             "support": {
                 "issues": "https://github.com/ibexa/admin-ui/issues",
-                "source": "https://github.com/ibexa/admin-ui/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/admin-ui/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:07:24+00:00"
+            "time": "2022-01-19T15:44:06+00:00"
         },
         {
             "name": "ibexa/admin-ui-assets",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/admin-ui-assets.git",
-                "reference": "ac87565c38c84ed4e816770c26112965b91241b5"
+                "reference": "b50a72cdc0d6fcd6cf0d95167d7849be25c4d000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/admin-ui-assets/zipball/ac87565c38c84ed4e816770c26112965b91241b5",
-                "reference": "ac87565c38c84ed4e816770c26112965b91241b5",
+                "url": "https://api.github.com/repos/ibexa/admin-ui-assets/zipball/b50a72cdc0d6fcd6cf0d95167d7849be25c4d000",
+                "reference": "b50a72cdc0d6fcd6cf0d95167d7849be25c4d000",
                 "shasum": ""
             },
             "require": {
@@ -2567,22 +2567,22 @@
             "description": "External assets dependencies for Ibexa AdminUI",
             "support": {
                 "issues": "https://github.com/ibexa/admin-ui-assets/issues",
-                "source": "https://github.com/ibexa/admin-ui-assets/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/admin-ui-assets/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-14T08:01:53+00:00"
+            "time": "2022-01-19T15:53:20+00:00"
         },
         {
             "name": "ibexa/compatibility-layer",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/compatibility-layer.git",
-                "reference": "f2775f619c9cb3026ac0fe6f988a369bd5cbfe95"
+                "reference": "93d39fe30840d5b9449fcce5c12359faedc08c8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/compatibility-layer/zipball/f2775f619c9cb3026ac0fe6f988a369bd5cbfe95",
-                "reference": "f2775f619c9cb3026ac0fe6f988a369bd5cbfe95",
+                "url": "https://api.github.com/repos/ibexa/compatibility-layer/zipball/93d39fe30840d5b9449fcce5c12359faedc08c8f",
+                "reference": "93d39fe30840d5b9449fcce5c12359faedc08c8f",
                 "shasum": ""
             },
             "require": {
@@ -2628,22 +2628,22 @@
             "description": "Compatibility layer between old code from organisation ezsystems and version 4.0 code from organisation ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/compatibility-layer/issues",
-                "source": "https://github.com/ibexa/compatibility-layer/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/compatibility-layer/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:10:44+00:00"
+            "time": "2022-01-19T15:47:34+00:00"
         },
         {
             "name": "ibexa/content-forms",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/content-forms.git",
-                "reference": "e3a73b87119b632fb3eac82fc11e6ce0e76bee3a"
+                "reference": "48f4763b9f18e56328839b0f0098e9f1f29aecbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/content-forms/zipball/e3a73b87119b632fb3eac82fc11e6ce0e76bee3a",
-                "reference": "e3a73b87119b632fb3eac82fc11e6ce0e76bee3a",
+                "url": "https://api.github.com/repos/ibexa/content-forms/zipball/48f4763b9f18e56328839b0f0098e9f1f29aecbc",
+                "reference": "48f4763b9f18e56328839b0f0098e9f1f29aecbc",
                 "shasum": ""
             },
             "require": {
@@ -2702,22 +2702,22 @@
             "description": "Use Symfony Forms with Ibexa Content & User objects",
             "support": {
                 "issues": "https://github.com/ibexa/content-forms/issues",
-                "source": "https://github.com/ibexa/content-forms/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/content-forms/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:07:41+00:00"
+            "time": "2022-01-19T15:44:24+00:00"
         },
         {
             "name": "ibexa/core",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/core.git",
-                "reference": "0f73e5c57c61e81d9be40128df31915b8dc6e64c"
+                "reference": "8406650d45de4c9b8c437770e2b8e03029c3e6ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/core/zipball/0f73e5c57c61e81d9be40128df31915b8dc6e64c",
-                "reference": "0f73e5c57c61e81d9be40128df31915b8dc6e64c",
+                "url": "https://api.github.com/repos/ibexa/core/zipball/8406650d45de4c9b8c437770e2b8e03029c3e6ce",
+                "reference": "8406650d45de4c9b8c437770e2b8e03029c3e6ce",
                 "shasum": ""
             },
             "require": {
@@ -2842,22 +2842,22 @@
             "description": "Ibexa DXP and Open Source core. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "https://ibexa.co",
             "support": {
-                "source": "https://github.com/ibexa/core/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/core/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:08:44+00:00"
+            "time": "2022-01-19T15:45:29+00:00"
         },
         {
             "name": "ibexa/cron",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/cron.git",
-                "reference": "5cbebe1ea67c853c7bbc56b350352e63e96d677d"
+                "reference": "3636afda26d5915067a28350319aeb4ca85a2ec3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/cron/zipball/5cbebe1ea67c853c7bbc56b350352e63e96d677d",
-                "reference": "5cbebe1ea67c853c7bbc56b350352e63e96d677d",
+                "url": "https://api.github.com/repos/ibexa/cron/zipball/3636afda26d5915067a28350319aeb4ca85a2ec3",
+                "reference": "3636afda26d5915067a28350319aeb4ca85a2ec3",
                 "shasum": ""
             },
             "require": {
@@ -2908,22 +2908,22 @@
             "homepage": "https://github.com/ezsystems/ezplatform-cron",
             "support": {
                 "issues": "https://github.com/ibexa/cron/issues",
-                "source": "https://github.com/ibexa/cron/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/cron/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:07:45+00:00"
+            "time": "2022-01-19T15:44:28+00:00"
         },
         {
             "name": "ibexa/design-engine",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/design-engine.git",
-                "reference": "1218862c5050467e2125e63d9264592546b10c8b"
+                "reference": "4e899ea92bc6c5f62a2a796500810cf6574053df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/design-engine/zipball/1218862c5050467e2125e63d9264592546b10c8b",
-                "reference": "1218862c5050467e2125e63d9264592546b10c8b",
+                "url": "https://api.github.com/repos/ibexa/design-engine/zipball/4e899ea92bc6c5f62a2a796500810cf6574053df",
+                "reference": "4e899ea92bc6c5f62a2a796500810cf6574053df",
                 "shasum": ""
             },
             "require": {
@@ -2983,22 +2983,22 @@
             "description": "Design fallback mechanism for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/design-engine/issues",
-                "source": "https://github.com/ibexa/design-engine/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/design-engine/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:07:48+00:00"
+            "time": "2022-01-19T15:44:32+00:00"
         },
         {
             "name": "ibexa/doctrine-schema",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/doctrine-schema.git",
-                "reference": "b0e7ca2c67d925759eb5425effb2eb71e5dc3fae"
+                "reference": "5df9f05bad7ec0a57950ed7923f56a85d93389c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/doctrine-schema/zipball/b0e7ca2c67d925759eb5425effb2eb71e5dc3fae",
-                "reference": "b0e7ca2c67d925759eb5425effb2eb71e5dc3fae",
+                "url": "https://api.github.com/repos/ibexa/doctrine-schema/zipball/5df9f05bad7ec0a57950ed7923f56a85d93389c7",
+                "reference": "5df9f05bad7ec0a57950ed7923f56a85d93389c7",
                 "shasum": ""
             },
             "require": {
@@ -3038,22 +3038,22 @@
             "description": "Abstraction layer, on top of Doctrine, for cross-DBMS schema import",
             "support": {
                 "issues": "https://github.com/ibexa/doctrine-schema/issues",
-                "source": "https://github.com/ibexa/doctrine-schema/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/doctrine-schema/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:04:35+00:00"
+            "time": "2022-01-19T15:32:45+00:00"
         },
         {
             "name": "ibexa/fieldtype-matrix",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-matrix.git",
-                "reference": "ef31a6aeb00efd815eaa04b1627e44e32137e633"
+                "reference": "0aa381c8bcea928f52587f77b1091b73ea8ffc4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-matrix/zipball/ef31a6aeb00efd815eaa04b1627e44e32137e633",
-                "reference": "ef31a6aeb00efd815eaa04b1627e44e32137e633",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-matrix/zipball/0aa381c8bcea928f52587f77b1091b73ea8ffc4f",
+                "reference": "0aa381c8bcea928f52587f77b1091b73ea8ffc4f",
                 "shasum": ""
             },
             "require": {
@@ -3109,22 +3109,22 @@
             "description": "Repository dedicated to Matrix Field Type for eZ Platform",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-matrix/issues",
-                "source": "https://github.com/ibexa/fieldtype-matrix/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/fieldtype-matrix/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:08:48+00:00"
+            "time": "2022-01-19T15:45:33+00:00"
         },
         {
             "name": "ibexa/fieldtype-query",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-query.git",
-                "reference": "c93daad909f62abeb112bac56a25f5997783f281"
+                "reference": "6f5afa620f0db4695c4fc36cd0eb504154342310"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-query/zipball/c93daad909f62abeb112bac56a25f5997783f281",
-                "reference": "c93daad909f62abeb112bac56a25f5997783f281",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-query/zipball/6f5afa620f0db4695c4fc36cd0eb504154342310",
+                "reference": "6f5afa620f0db4695c4fc36cd0eb504154342310",
                 "shasum": ""
             },
             "require": {
@@ -3189,22 +3189,22 @@
             "description": "Ibexa Field Type that defines a query.",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-query/issues",
-                "source": "https://github.com/ibexa/fieldtype-query/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/fieldtype-query/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:18+00:00"
+            "time": "2022-01-19T15:46:08+00:00"
         },
         {
             "name": "ibexa/fieldtype-richtext",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/fieldtype-richtext.git",
-                "reference": "256a457b9e3e2d8dfd4ca67db5d41b5291f06bac"
+                "reference": "396a59e7239c0adab5c8c5fda4445ddd7d864b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/fieldtype-richtext/zipball/256a457b9e3e2d8dfd4ca67db5d41b5291f06bac",
-                "reference": "256a457b9e3e2d8dfd4ca67db5d41b5291f06bac",
+                "url": "https://api.github.com/repos/ibexa/fieldtype-richtext/zipball/396a59e7239c0adab5c8c5fda4445ddd7d864b9c",
+                "reference": "396a59e7239c0adab5c8c5fda4445ddd7d864b9c",
                 "shasum": ""
             },
             "require": {
@@ -3267,22 +3267,22 @@
             "description": "Ibexa RichText Extension, including the RichText FieldType.",
             "support": {
                 "issues": "https://github.com/ibexa/fieldtype-richtext/issues",
-                "source": "https://github.com/ibexa/fieldtype-richtext/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/fieldtype-richtext/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:31+00:00"
+            "time": "2022-01-19T15:46:22+00:00"
         },
         {
             "name": "ibexa/graphql",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/graphql.git",
-                "reference": "a8e5d59ca46cc4b482f6875a60aeba8ecc76d413"
+                "reference": "427aac300eeca8cd661815084711ad499a9d1c31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/graphql/zipball/a8e5d59ca46cc4b482f6875a60aeba8ecc76d413",
-                "reference": "a8e5d59ca46cc4b482f6875a60aeba8ecc76d413",
+                "url": "https://api.github.com/repos/ibexa/graphql/zipball/427aac300eeca8cd661815084711ad499a9d1c31",
+                "reference": "427aac300eeca8cd661815084711ad499a9d1c31",
                 "shasum": ""
             },
             "require": {
@@ -3348,22 +3348,22 @@
             "description": "GraphQL server for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/graphql/issues",
-                "source": "https://github.com/ibexa/graphql/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/graphql/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:08:03+00:00"
+            "time": "2022-01-19T15:44:47+00:00"
         },
         {
             "name": "ibexa/http-cache",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/http-cache.git",
-                "reference": "7ae69170f123f803d758cee276c98e6a5a8eecf3"
+                "reference": "e763c02ae237dd3269a61ddebc9010431b6853ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/http-cache/zipball/7ae69170f123f803d758cee276c98e6a5a8eecf3",
-                "reference": "7ae69170f123f803d758cee276c98e6a5a8eecf3",
+                "url": "https://api.github.com/repos/ibexa/http-cache/zipball/e763c02ae237dd3269a61ddebc9010431b6853ff",
+                "reference": "e763c02ae237dd3269a61ddebc9010431b6853ff",
                 "shasum": ""
             },
             "require": {
@@ -3423,22 +3423,22 @@
             "description": "HTTP cache handling for Ibexa DXP.",
             "support": {
                 "issues": "https://github.com/ibexa/http-cache/issues",
-                "source": "https://github.com/ibexa/http-cache/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/http-cache/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:08:07+00:00"
+            "time": "2022-01-19T15:44:52+00:00"
         },
         {
             "name": "ibexa/post-install",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/post-install.git",
-                "reference": "47c9099c267882665463503e766dd0b66ac9979a"
+                "reference": "4fb6bfec7076551befc9df9ffedd315e3c6587f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/post-install/zipball/47c9099c267882665463503e766dd0b66ac9979a",
-                "reference": "47c9099c267882665463503e766dd0b66ac9979a",
+                "url": "https://api.github.com/repos/ibexa/post-install/zipball/4fb6bfec7076551befc9df9ffedd315e3c6587f9",
+                "reference": "4fb6bfec7076551befc9df9ffedd315e3c6587f9",
                 "shasum": ""
             },
             "require": {
@@ -3484,22 +3484,22 @@
             "description": "Post Installation Tool for Ibexa products",
             "support": {
                 "issues": "https://github.com/ibexa/post-install/issues",
-                "source": "https://github.com/ibexa/post-install/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/post-install/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:10:34+00:00"
+            "time": "2022-01-19T15:47:22+00:00"
         },
         {
             "name": "ibexa/rest",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/rest.git",
-                "reference": "2f1df10de232064ff8aff864fdf05d14615ea0f7"
+                "reference": "6489c99b9d08a0a6ab49acf89d9a365c50ccf4ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/rest/zipball/2f1df10de232064ff8aff864fdf05d14615ea0f7",
-                "reference": "2f1df10de232064ff8aff864fdf05d14615ea0f7",
+                "url": "https://api.github.com/repos/ibexa/rest/zipball/6489c99b9d08a0a6ab49acf89d9a365c50ccf4ec",
+                "reference": "6489c99b9d08a0a6ab49acf89d9a365c50ccf4ec",
                 "shasum": ""
             },
             "require": {
@@ -3560,22 +3560,22 @@
             "description": "Ibexa REST bundle",
             "support": {
                 "issues": "https://github.com/ibexa/rest/issues",
-                "source": "https://github.com/ibexa/rest/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/rest/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:24+00:00"
+            "time": "2022-01-19T15:46:14+00:00"
         },
         {
             "name": "ibexa/search",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/search.git",
-                "reference": "8de31a0e4eb56bfe50658ba39abae3f82c87cb80"
+                "reference": "945b69b64c64e99bfb3f416c87151aee968f57bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/search/zipball/8de31a0e4eb56bfe50658ba39abae3f82c87cb80",
-                "reference": "8de31a0e4eb56bfe50658ba39abae3f82c87cb80",
+                "url": "https://api.github.com/repos/ibexa/search/zipball/945b69b64c64e99bfb3f416c87151aee968f57bf",
+                "reference": "945b69b64c64e99bfb3f416c87151aee968f57bf",
                 "shasum": ""
             },
             "require": {
@@ -3620,22 +3620,22 @@
             "description": "Ibexa DXP Search bundle",
             "support": {
                 "issues": "https://github.com/ibexa/search/issues",
-                "source": "https://github.com/ibexa/search/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/search/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:35+00:00"
+            "time": "2022-01-19T15:46:26+00:00"
         },
         {
             "name": "ibexa/solr",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/solr.git",
-                "reference": "232cbf80f847a753bf0f47a399ff5ac00e71e45a"
+                "reference": "3a05145ce3dbf6ceed3f03322a98e9ce018caa63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/solr/zipball/232cbf80f847a753bf0f47a399ff5ac00e71e45a",
-                "reference": "232cbf80f847a753bf0f47a399ff5ac00e71e45a",
+                "url": "https://api.github.com/repos/ibexa/solr/zipball/3a05145ce3dbf6ceed3f03322a98e9ce018caa63",
+                "reference": "3a05145ce3dbf6ceed3f03322a98e9ce018caa63",
                 "shasum": ""
             },
             "require": {
@@ -3688,22 +3688,22 @@
             "description": "Solr search engine implementation for Ibexa",
             "support": {
                 "issues": "https://github.com/ibexa/solr/issues",
-                "source": "https://github.com/ibexa/solr/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/solr/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:50+00:00"
+            "time": "2022-01-19T15:46:39+00:00"
         },
         {
             "name": "ibexa/standard-design",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/standard-design.git",
-                "reference": "ef835d17a80d73555d23c5a4a41ee85c0a48c19c"
+                "reference": "35415d0102181d0b13d9220ed746d8753dd9c43a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/standard-design/zipball/ef835d17a80d73555d23c5a4a41ee85c0a48c19c",
-                "reference": "ef835d17a80d73555d23c5a4a41ee85c0a48c19c",
+                "url": "https://api.github.com/repos/ibexa/standard-design/zipball/35415d0102181d0b13d9220ed746d8753dd9c43a",
+                "reference": "35415d0102181d0b13d9220ed746d8753dd9c43a",
                 "shasum": ""
             },
             "require": {
@@ -3744,22 +3744,22 @@
             "description": "Ibexa Standard Design Bundle",
             "support": {
                 "issues": "https://github.com/ibexa/standard-design/issues",
-                "source": "https://github.com/ibexa/standard-design/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/standard-design/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:09:56+00:00"
+            "time": "2022-01-19T15:46:44+00:00"
         },
         {
             "name": "ibexa/system-info",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/system-info.git",
-                "reference": "15cbc54cbffd1217f01b34d8e5916d0dbd04850d"
+                "reference": "db295a05a026674875b09d52828dee1fb4d236f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/system-info/zipball/15cbc54cbffd1217f01b34d8e5916d0dbd04850d",
-                "reference": "15cbc54cbffd1217f01b34d8e5916d0dbd04850d",
+                "url": "https://api.github.com/repos/ibexa/system-info/zipball/db295a05a026674875b09d52828dee1fb4d236f9",
+                "reference": "db295a05a026674875b09d52828dee1fb4d236f9",
                 "shasum": ""
             },
             "require": {
@@ -3817,9 +3817,9 @@
             "description": "Providing information about the system Ibexa is running on, and Ibexa install itself",
             "support": {
                 "issues": "https://github.com/ibexa/system-info/issues",
-                "source": "https://github.com/ibexa/system-info/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/system-info/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:04:40+00:00"
+            "time": "2022-01-19T15:32:49+00:00"
         },
         {
             "name": "ibexa/templated-uri-bundle",
@@ -3950,16 +3950,16 @@
         },
         {
             "name": "ibexa/user",
-            "version": "v4.0.0-rc2",
+            "version": "v4.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibexa/user.git",
-                "reference": "714b62a50de3b9c1978371d0b90d1e82217e2f98"
+                "reference": "1712e2101bcc32725cad8e15b2cb9c650a353b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibexa/user/zipball/714b62a50de3b9c1978371d0b90d1e82217e2f98",
-                "reference": "714b62a50de3b9c1978371d0b90d1e82217e2f98",
+                "url": "https://api.github.com/repos/ibexa/user/zipball/1712e2101bcc32725cad8e15b2cb9c650a353b34",
+                "reference": "1712e2101bcc32725cad8e15b2cb9c650a353b34",
                 "shasum": ""
             },
             "require": {
@@ -4021,9 +4021,9 @@
             "description": "Ibexa User bundle",
             "support": {
                 "issues": "https://github.com/ibexa/user/issues",
-                "source": "https://github.com/ibexa/user/tree/v4.0.0-rc2"
+                "source": "https://github.com/ibexa/user/tree/v4.0.0-rc3"
             },
-            "time": "2022-01-18T15:10:00+00:00"
+            "time": "2022-01-19T15:46:49+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -8326,16 +8326,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.17.6",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "7a79135e1dc66b30042b4d968ecba0908f9374bc"
+                "reference": "97634769241adf2cbfde0cec2c336c2612c06d49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/7a79135e1dc66b30042b4d968ecba0908f9374bc",
-                "reference": "7a79135e1dc66b30042b4d968ecba0908f9374bc",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/97634769241adf2cbfde0cec2c336c2612c06d49",
+                "reference": "97634769241adf2cbfde0cec2c336c2612c06d49",
                 "shasum": ""
             },
             "require": {
@@ -8371,7 +8371,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v1.17.6"
+                "source": "https://github.com/symfony/flex/tree/v1.18.0"
             },
             "funding": [
                 {
@@ -8387,7 +8387,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-29T15:39:37+00:00"
+            "time": "2022-01-19T08:24:55+00:00"
         },
         {
             "name": "symfony/form",
