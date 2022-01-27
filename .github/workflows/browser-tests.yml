@@ -22,7 +22,7 @@ jobs:
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
-        name: "PHP 7.4/MySQL"
+        name: "PHP 7.4/MySQL/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -31,6 +31,7 @@ jobs:
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             multirepository: true
+            use-compatibility-layer: true
             timeout: 40
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
