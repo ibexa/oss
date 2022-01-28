@@ -68,7 +68,8 @@
     "conflict": {
         "gregwar/captcha-bundle": "2.2.0",
         "lexik/jwt-authentication-bundle": "2.12.0",
-        "symfony/dependency-injection": "5.3.7"
+        "symfony/dependency-injection": "5.3.7",
+        "symfony/framework-bundle": "5.3.14 || 5.4.3"
     },
     "extra": {
         "branch-alias": {
