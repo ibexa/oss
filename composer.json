@@ -21,6 +21,7 @@
         "ibexa/fieldtype-richtext": "^4.0.x-dev",
         "ibexa/graphql": "^4.0.x-dev",
         "ibexa/http-cache": "^4.0.x-dev",
+        "ibexa/i18n": "^4.0.x-dev",
         "ibexa/post-install": "^4.0.x-dev",
         "ibexa/rest": "^4.0.x-dev",
         "ibexa/search": "^4.0.x-dev",
