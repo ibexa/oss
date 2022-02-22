@@ -9,7 +9,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.4/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.4/Node 16/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -22,7 +22,7 @@ jobs:
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
-        name: "PHP 7.4/MySQL/Compatibility layer"
+        name: "PHP 7.4/Node 14/MySQL/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -33,5 +33,6 @@ jobs:
             multirepository: true
             use-compatibility-layer: true
             timeout: 40
+            php-image: "ezsystems/php:7.4-v2-node14"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
