@@ -30,6 +30,6 @@ jobs:
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             multirepository: true
-            php-image: "ezsystems/php:7.3-v2-node14"
+            php-image: "ezsystems/php:7.3-v2-node16"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
