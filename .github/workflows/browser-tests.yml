@@ -36,3 +36,14 @@ jobs:
             php-image: "ezsystems/php:7.4-v2-node14"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    regression-oss-setup3:
+        name: "PHP 8.1/MySQL"
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        with:
+            project-edition: "oss"
+            project-version: "^3.3.x-dev"
+            test-suite: "--profile=regression --suite=oss"
+            test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
+            php-image: "ezsystems/php:8.1-v2-node16"
+        secrets:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
