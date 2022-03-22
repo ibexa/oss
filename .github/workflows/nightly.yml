@@ -18,8 +18,8 @@ jobs:
                     - ibexa/experience
                     - ibexa/commerce
                 branch:
-                    - 3.3
-                    - 4.0
+                    - "3.3"
+                    - "4.0"
                     - master
         steps:
             - uses: octokit/request-action@v2.x
