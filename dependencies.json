@@ -1,0 +1,8 @@
+[
+    {
+        "requirement": "dev-add-missing-context as 8.3.x-dev",
+        "repositoryUrl": "https://github.com/ezsystems/BehatBundle",
+        "package": "ezsystems/behatbundle",
+        "shouldBeAddedAsVCS": false
+    }
+]
