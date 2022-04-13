@@ -18,6 +18,7 @@ jobs:
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             multirepository: true
+            ci-scripts-branch: test-api-limits
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
@@ -31,6 +32,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             multirepository: true
             php-image: "ezsystems/php:7.3-v2-node14"
+            ci-scripts-branch: test-api-limits
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup3:
@@ -42,5 +44,6 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             php-image: "ezsystems/php:8.1-v2-node16"
+            ci-scripts-branch: test-api-limits
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
