@@ -6,12 +6,6 @@
             "repositoryUrl": "https://github.com/ibexa/graphql",
             "package": "ibexa/graphql",
             "shouldBeAddedAsVCS": false
-        },
-        {
-            "requirement": "dev-fix-namespace as 4.1.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/connector-dam",
-            "package": "ibexa/connector-dam",
-            "shouldBeAddedAsVCS": true
         }
     ]
 }
