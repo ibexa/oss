@@ -60,7 +60,8 @@
         "platformsh/symfonyflex-bridge": "^2.4",
         "sensio/framework-extra-bundle": "^6.1.0",
         "twig/extra-bundle": "^3.1.1",
-        "doctrine/doctrine-bundle": "^2.4.2"
+        "doctrine/doctrine-bundle": "^2.4.2",
+        "doctrine/persistence": "^2.0"
     },
     "require-dev": {
         "ibexa/ci-scripts": "^0.2@dev"
