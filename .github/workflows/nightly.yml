@@ -19,7 +19,6 @@ jobs:
                     - ibexa/commerce
                 branch:
                     - "3.3"
-                    - "4.0"
                     - "4.1"
                     - master
         steps:
