@@ -29,5 +29,6 @@ jobs:
                   workflow: "browser-tests.yml"
                   ref: "!!str ${{ matrix.branch }}"
                   route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
+                  inputs: '{ "send-success-notification": "false" }'
               env:
                   GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
