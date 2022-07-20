@@ -1,6 +1,12 @@
 name: Browser tests
 on:
-    workflow_dispatch: ~
+    workflow_dispatch:
+        inputs:
+            send-success-notification:
+                description: 'Send a notification when the tests pass'     
+                required: false
+                type: boolean
+                default: true
     push:
         branches:
             - master
@@ -17,6 +23,7 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
+            send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -29,6 +36,7 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
+            send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
             php-image: "ezsystems/php:7.3-v2-node14"
         secrets:
@@ -42,5 +50,6 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             php-image: "ezsystems/php:8.1-v2-node16"
+            send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
