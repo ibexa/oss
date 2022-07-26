@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-3305-register-login-styling as 4.2.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui",
+            "package": "ibexa/admin-ui",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-fix-type-error as 3.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/allure-behat",
+            "package": "ezsystems/allure-behat",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
