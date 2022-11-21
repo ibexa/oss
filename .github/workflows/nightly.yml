@@ -20,6 +20,7 @@ jobs:
                 branch:
                     - "3.3"
                     - "4.2"
+                    - "4.3"
                     - master
         steps:
             - uses: octokit/request-action@v2.x
