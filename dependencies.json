@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-ibx-3794-filtering-counter-endpoint as 1.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-kernel",
+            "package": "ezsystems/ezplatform-kernel",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-3794-use-filtering-for-subtree-limit-check as 2.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-admin-ui",
+            "package": "ezsystems/ezplatform-admin-ui",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
