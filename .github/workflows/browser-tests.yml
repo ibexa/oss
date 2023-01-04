@@ -32,7 +32,7 @@ jobs:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
         name: "PHP 8.1/Node 16/MySQL/Compatibility layer"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@compatibility-layer-cache
         with:
             project-edition: "oss"
             project-version: "4.4.x-dev"
