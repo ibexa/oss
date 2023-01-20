@@ -30,6 +30,9 @@ jobs:
             timeout: 60
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
+            AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
+            AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
         name: "PHP 8.1/Node 16/MySQL/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
@@ -47,3 +50,6 @@ jobs:
             php-image: "ezsystems/php:8.1-v2-node16"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
+            AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
+            AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
