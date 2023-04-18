@@ -26,7 +26,7 @@ jobs:
       - name: Get previous last full release
         id: prevfull
         run: |
-          OUT=$(hub api /repos/${{ github.repository }}/releases | jq -r -s '[ .[][].tag_name | select(. | contains("rc") or contains("beta") or contains("alpha") | not) ] | first')
+          OUT=$(hub api /repos/${{ github.repository }}/releases | jq -r '[.[] | select(.tag_name | test("^(?!.*alpha|.*beta|.*rc).*$")) | .tag_name] | sort_by(.) | last')
           echo "tag=$( echo "$OUT" )" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
