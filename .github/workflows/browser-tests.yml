@@ -24,6 +24,7 @@ jobs:
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
+            php-image: "ezsystems/php:7.4-v2-node14"
             multirepository: true
             job-count: 2
             timeout: 60
@@ -40,7 +41,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ezsystems/php:7.3-v2-node14"
+            php-image: "ezsystems/php:7.3-v2-node12"
             job-count: 2
             timeout: 60
         secrets:
