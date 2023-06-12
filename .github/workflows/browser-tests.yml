@@ -45,7 +45,7 @@ jobs:
             use-compatibility-layer: true
             job-count: 2
             timeout: 60
-            php-image: "ezsystems/php:8.1-v2-node16"
+            php-image: "ghcr.io/ibexa/docker/php:8.1-node16"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
