@@ -40,7 +40,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ezsystems/php:7.3-v2-node14"
+            php-image: "ghcr.io/ibexa/docker/php:7.3-node18"
             job-count: 2
             timeout: 60
         secrets:
