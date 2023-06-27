@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.4/Node 14/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.4/Node 18/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -29,7 +29,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ezsystems/php:7.4-v2-node14"
+            php-image: "ghcr.io/ibexa/docker/php:7.4-node18"
             job-count: 2
             timeout: 60
         secrets:
