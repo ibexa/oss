@@ -18,6 +18,7 @@ jobs:
         name: "PHP 7.4/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
+            ci-scripts-branch: "ibx-4516-node-18"
             project-edition: "oss"
             project-version: "^3.3.x-dev"
             test-suite: "--profile=regression --suite=oss"
@@ -40,7 +41,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ghcr.io/ibexa/docker/php:7.3-node18"
+            php-image: "ghcr.io/ibexa/docker/php:7.3-node16"
             job-count: 2
             timeout: 60
         secrets:
@@ -53,7 +54,7 @@ jobs:
             project-version: "^3.3.x-dev"
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            php-image: "ezsystems/php:8.1-v2-node16"
+            php-image: "ghcr.io/ibexa/docker/php:8.1-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
