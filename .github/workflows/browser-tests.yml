@@ -7,6 +7,11 @@ on:
                 required: false
                 type: boolean
                 default: true
+            project-version:
+                description: 'Fill only when the tests should run on a stable release'
+                required: false
+                type: string
+                default: ''
     push:
         branches:
             - master
@@ -19,7 +24,7 @@ jobs:
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
-            project-version: "^3.3.x-dev"
+            project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
@@ -35,7 +40,7 @@ jobs:
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
-            project-version: "^3.3.x-dev"
+            project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
@@ -51,7 +56,7 @@ jobs:
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
-            project-version: "^3.3.x-dev"
+            project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             php-image: "ghcr.io/ibexa/docker/php:8.1-node18"
