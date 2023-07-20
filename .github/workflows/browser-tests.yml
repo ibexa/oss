@@ -15,7 +15,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.4/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.3/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -25,12 +25,13 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
+            php-image: "ghcr.io/ibexa/docker/php:7.3-node14"
             job-count: 2
             timeout: 60
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
-        name: "PHP 7.3/MySQL"
+        name: "PHP 7.4/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -40,7 +41,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ezsystems/php:7.3-v2-node14"
+            php-image: "ghcr.io/ibexa/docker/php:7.4-node16"
             job-count: 2
             timeout: 60
         secrets:
@@ -53,7 +54,7 @@ jobs:
             project-version: "^3.3.x-dev"
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            php-image: "ezsystems/php:8.1-v2-node16"
+            php-image: "ghcr.io/ibexa/docker/php:8.1-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
