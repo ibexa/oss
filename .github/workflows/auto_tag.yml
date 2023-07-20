@@ -1,0 +1,199 @@
+name: Create Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (x.y.z-abcN e.g. 4.5.6-beta1)'
+        required: true
+      real_op:
+        description: 'Push changes'
+        type: boolean
+        default: false
+        required: true
+      git_push_args:
+        description: 'For example: --force-with-lease'
+        type: string
+        default: ''
+        required: false
+
+jobs:
+  preparation:
+    runs-on: ubuntu-latest
+    # This should allow parallel runs in a chain, e.g. OSS->Content->Experience->Commerce
+    # whilst allowing Satis to process
+    timeout-minutes: 30
+
+    steps:
+      - name: Check for admin-ui-assets tag
+        if: github.event.repository.name == 'oss'
+        uses: octokit/request-action@v2.x
+        with:
+          owner: ibexa
+          repo: admin-ui-assets
+          route: /repos/{owner}/{repo}/contents/package.json?ref=v${{ inputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
+
+      # The jq command would return a zero exit status if it was able to filter the input JSON data and
+      # produce at least one matching object in the array, and a non-zero exit status if no matching object was found.
+      # This particular JQ filter expression:
+      # .packages."${{ env.PARENT }}"[]: accesses an array of objects in the packages object, with the key specified by the environment variable PARENT.
+      # select(.version == "${{ env.V_VERSION }}"): filters the array to only include objects where the version property is equal to the value of the environment variable V_VERSION.
+
+      # No need to validate for oss version in satis
+      - name: Validate satis for content version
+        if: github.event.repository.name == 'experience'
+        env:
+          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
+          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
+          PARENT: ibexa/content
+          V_VERSION: v${{ inputs.version }}
+        run: |
+          for EXPONENTIAL_BACKOFF in {1..10}; do
+          curl https://updates.ibexa.co/p2/${PARENT}.json -s -u $SATIS_NETWORK_KEY:$SATIS_NETWORK_TOKEN | jq -e '.packages."${{ env.PARENT }}"[] | select(.version == "${{ env.V_VERSION }}")' && break;
+            DELAY=$((2**$EXPONENTIAL_BACKOFF))
+            echo "${PARENT}:${V_VERSION} not yet available, sleeping for $DELAY seconds"
+            sleep $DELAY
+          done
+
+      - name: Validate satis for experience version
+        if: github.event.repository.name == 'commerce'
+        env:
+          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
+          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
+          PARENT: ibexa/experience
+          V_VERSION: v${{ inputs.version }}
+        run: |
+          for EXPONENTIAL_BACKOFF in {1..10}; do
+          curl https://updates.ibexa.co/p2/${PARENT}.json -s -u $SATIS_NETWORK_KEY:$SATIS_NETWORK_TOKEN | jq -e '.packages."${{ env.PARENT }}"[] | select(.version == "${{ env.V_VERSION }}")' && break;
+            DELAY=$((2**$EXPONENTIAL_BACKOFF))
+            echo "${PARENT}:${V_VERSION} not yet available, sleeping for $DELAY seconds"
+            sleep $DELAY
+          done
+  
+  action:
+    needs: preparation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Install sponge
+        run: |
+          sudo apt-get install -y moreutils
+
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          coverage: none
+          extensions: pdo_sqlite, gd
+          tools: cs2pr
+
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+          installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
+          private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Get release information
+        uses: octokit/request-action@v2.x
+        id: release
+        with:
+          owner: ibexa
+          repo: release-maker
+          route: /repos/{owner}/{repo}/contents/releases/${{ inputs.version }}/release.json
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+
+      # The effect of this jq command is to take a JSON array of objects,
+      # transform each object into a new object using its packageName and targetVersion properties,
+      # and return the result as a single JSON object.
+      # The sponge command is used to pipe the output of jq back into the same file, effectively replacing its contents with the updated JSON data.
+      - name: Process release information
+        run: |
+          cat > input.json <<'EOF'
+          ${{ steps.release.outputs.data }}
+          EOF
+          jq -r '.["content"]' input.json | base64 --decode | jq -c . > release.json
+          jq -s '[ .[][] | { (.packageName): (.targetVersion) } ] | add' release.json | sponge release.json
+
+      - name: Set minimum stability
+        run: |
+          VERSION=$( echo ${{ inputs.version }} | cut -d '-' -f 2 )
+          SET_STABILITY="composer config minimum-stability"
+          $SET_STABILITY --unset
+          composer config prefer-stable --unset
+          case $VERSION in
+            alpha*|beta*|rc*) composer config prefer-stable true ;;&
+            alpha*) $SET_STABILITY alpha ;;
+            beta*) $SET_STABILITY beta ;;
+            rc*) $SET_STABILITY rc ;;
+          esac;
+
+      - name: Patch parent version for OSS
+        if: github.event.repository.name == 'oss'
+        run: jq '.require["ibexa/admin-ui-assets"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
+      - name: Patch parent version for Content
+        if: github.event.repository.name == 'content'
+        run: jq '.require["ibexa/oss"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
+      - name: Patch parent version for Experience
+        if: github.event.repository.name == 'experience'
+        run: jq '.require["ibexa/content"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
+      - name: Patch parent version for Commerce
+        if: github.event.repository.name == 'commerce'
+        run: jq '.require["ibexa/experience"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
+
+      # The effect of this jq command is to modify the require property of the input JSON object by using values from the $release object,
+      # if they exist, to update the values of the keys in the require object.
+      - name: Patch composer require versions
+        run: |
+          jq --argfile release release.json '
+            .require |= (
+              to_entries | 
+              map({
+                key: .key,
+                value: (if ($release[.key]) then $release[.key] else .value end)
+              }) | from_entries
+            )
+          ' composer.json > composer.tmp
+          mv composer.tmp composer.json
+
+      - name: Reformat composer.json
+        run: cat composer.json | unexpand -t2 | expand -t4 | sponge composer.json
+
+      - name: Preview composer.json
+        run: cat composer.json
+
+      - name: Add composer keys for private packagist
+        run: |
+          composer config http-basic.updates.ibexa.co $SATIS_NETWORK_KEY $SATIS_NETWORK_TOKEN
+          composer config github-oauth.github.com $APP_GITHUB_TOKEN
+        env:
+          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
+          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
+          APP_GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+
+      - name: Composer update
+        run: |
+          composer update --no-scripts --no-plugins --no-install
+          composer validate
+
+      - name: Commit, tag and push
+        if: inputs.real_op
+        env:
+          GIT_PUSH_ARGS: ${{ inputs.git_push_args }}
+          ROBOT_TOKEN: ${{ secrets.EZROBOT_PAT }}
+        run: |
+          git config --local user.email "681611+ezrobot@users.noreply.github.com"
+          git config --local user.name "ezrobot"
+          git remote set-url origin https://x-access-token:${{ env.ROBOT_TOKEN }}@github.com/${{ github.repository }}
+          git add composer.*
+          git commit -m "[composer] Set dependencies for ${{ inputs.version }} release + .lock"
+          git tag "v${{ inputs.version }}"
+          git push origin "v${{ inputs.version }}" ${GIT_PUSH_ARGS}
