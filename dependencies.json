@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-webhdx-patch-1 as 4.5.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/content-forms",
+            "package": "ibexa/content-forms",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
