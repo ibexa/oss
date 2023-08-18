@@ -6,7 +6,7 @@ on:
                 description: 'Send a notification when the tests pass'     
                 required: false
                 type: boolean
-                default: true
+                default: false
             project-version:
                 description: 'Fill only when the tests should run on a stable release'
                 required: false
