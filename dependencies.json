@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-5385_add_content-type_option_to_reindex_command as 4.5.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
