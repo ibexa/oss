@@ -1,0 +1,17 @@
+{
+     "recipesEndpoint": "",
+     "packages": [
+         {
+             "requirement": "dev-ibx-3240-reworked-vat-assignment-form as 4.6.x-dev",
+             "repositoryUrl": "https://github.com/ibexa/product-catalog",
+             "package": "ibexa/product-catalog",
+             "shouldBeAddedAsVCS": false
+         },
+         {
+             "requirement": "dev-content-type-data-new-aware as 4.6.x-dev",
+             "repositoryUrl": "https://github.com/ibexa/admin-ui",
+             "package": "ibexa/admin-ui",
+             "shouldBeAddedAsVCS": false
+         }
+     ]
+ }
