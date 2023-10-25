@@ -24,6 +24,8 @@ jobs:
                 include:
                     - repository: ibexa/headless
                       branch: master
+                    - repository: ibexa/example-remote-product-catalog
+                      branch: main
                 exclude:
                     - repository: ibexa/content
                       branch: master
