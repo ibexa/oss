@@ -24,7 +24,7 @@ jobs:
                 include:
                     - repository: ibexa/headless
                       branch: master
-                    - repository: ibexa/example-remote-product-catalog
+                    - repository: ibexa/example-in-memory-product-catalog
                       branch: main
                 exclude:
                     - repository: ibexa/content
