@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-6845-matrix-field-columns-table-header-not-present-until-saved as 4.5.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-matrix",
+            "package": "ibexa/fieldtype-matrix",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-6845-matrix-field-columns-table-header-not-present-until-saved as 4.5.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui",
+            "package": "ibexa/admin-ui",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
