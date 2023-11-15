@@ -23,6 +23,7 @@
         "ibexa/graphql": "~4.6.x-dev",
         "ibexa/http-cache": "~4.6.x-dev",
         "ibexa/i18n": "~4.6.x-dev",
+        "ibexa/notifications": "~4.6.x-dev",
         "ibexa/post-install": "~4.6.x-dev",
         "ibexa/rest": "~4.6.x-dev",
         "ibexa/search": "~4.6.x-dev",
