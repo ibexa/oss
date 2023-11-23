@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "https://api.github.com/repos/ibexa/recipes-dev/contents/index.json?ref=flex/pull-97",
+    "packages": [
+        {
+            "requirement": "dev-upgrade-cke as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-richtext",
+            "package": "ibexa/fieldtype-richtext",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-deps-update as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui-assets",
+            "package": "ibexa/admin-ui-assets",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
