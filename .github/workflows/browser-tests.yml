@@ -30,7 +30,7 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ghcr.io/ibexa/docker/php:7.4-node14"
+            php-image: "ghcr.io/ibexa/docker/php:7.4-node18"
             job-count: 2
             timeout: 60
         secrets:
@@ -52,7 +52,7 @@ jobs:
             use-compatibility-layer: true
             job-count: 2
             timeout: 60
-            php-image: "ghcr.io/ibexa/docker/php:8.0-node16"
+            php-image: "ghcr.io/ibexa/docker/php:8.0-node18"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
