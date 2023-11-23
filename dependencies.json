@@ -8,7 +8,7 @@
             "shouldBeAddedAsVCS": false
         },
         {
-            "requirement": "dev-deps-update as 4.6.x-dev",
+            "requirement": "dev-test-deps-update as 4.6.x-dev",
             "repositoryUrl": "https://github.com/ibexa/admin-ui-assets",
             "package": "ibexa/admin-ui-assets",
             "shouldBeAddedAsVCS": false
