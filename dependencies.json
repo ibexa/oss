@@ -2,7 +2,7 @@
     "recipesEndpoint": "",
     "packages": [
         {
-            "requirement": "dev-ibx-6507-retry-load-user-group as 4.5.x-dev",
+            "requirement": "dev-ibx-6507-retry-load-user-group-46 as 4.6.x-dev",
             "repositoryUrl": "https://github.com/ibexa/behat",
             "package": "ibexa/behat",
             "shouldBeAddedAsVCS": false
