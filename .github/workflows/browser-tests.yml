@@ -21,7 +21,7 @@ on:
 jobs:
     regression-oss-setup1:
         name: "PHP 7.4/Node 18/PostgreSQL/Varnish/Redis"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-6507
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -40,7 +40,7 @@ jobs:
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
         name: "PHP 8.0/Node 18/MySQL/Compatibility layer"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-6507
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -59,13 +59,14 @@ jobs:
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup3:
-        name: "PHP 8.2/Node 18/MySQL"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        name: "PHP 8.2/Node 18/MySQL/Solr"
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-6507
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
+            setup: "doc/docker/base-dev.yml:doc/docker/solr.yml:doc/docker/selenium.yml"
             php-image: "ghcr.io/ibexa/docker/php:8.2-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
