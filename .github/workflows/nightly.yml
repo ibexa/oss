@@ -24,18 +24,18 @@ jobs:
                     - master
                 include:
                     - repository: ibexa/headless
-                      branch:
-                          - "4.6"
-                          - master
+                      branch: "4.6"
+                    - repository: ibexa/headless
+                      branch: master
                     - repository: ibexa/example-in-memory-product-catalog
-                      branch:
-                          - "4.6"
-                          - main
+                      branch: "4.6"
+                    - repository: ibexa/example-in-memory-product-catalog
+                      branch: main
                 exclude:
                     - repository: ibexa/content
-                      branch:
-                          - "4.6"
-                          - master
+                      branch: "4.6"
+                    - repository: ibexa/content
+                      branch: master
         steps:
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
