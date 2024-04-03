@@ -21,7 +21,7 @@ on:
 jobs:
     regression-oss-setup1:
         name: "PHP 7.3/PostgreSQL/Varnish/Redis new base"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@compose-v2
         with:
             ci-scripts-branch: compose-v2
             project-edition: "oss"
@@ -38,7 +38,7 @@ jobs:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
         name: "PHP 7.4/MySQL"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@compose-v2
         with:
             ci-scripts-branch: compose-v2
             project-edition: "oss"
@@ -55,7 +55,7 @@ jobs:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup3:
         name: "PHP 8.2/MySQL"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@compose-v2
         with:
             ci-scripts-branch: compose-v2
             project-edition: "oss"
