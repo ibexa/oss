@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.3/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.3/PostgreSQL/Varnish/Redis new base"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             ci-scripts-branch: compose-v2
