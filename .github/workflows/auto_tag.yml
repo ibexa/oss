@@ -84,7 +84,7 @@ jobs:
       - name: Setup PHP Action
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
+          php-version: 8.3
           coverage: none
           extensions: pdo_sqlite, gd
           tools: cs2pr
@@ -97,7 +97,7 @@ jobs:
           installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
           private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
 
