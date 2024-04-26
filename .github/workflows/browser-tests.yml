@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.4/Node 18/PostgreSQL/Varnish/Redis"
+        name: "PHP 8.3/Node 18/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -38,7 +38,7 @@ jobs:
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
-        name: "PHP 8.0/Node 18/MySQL/Compatibility layer"
+        name: "PHP 8.3/Node 18/MySQL/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -57,7 +57,7 @@ jobs:
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup3:
-        name: "PHP 8.2/Node 18/MySQL/Solr"
+        name: "PHP 8.3/Node 18/MySQL/Solr"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
