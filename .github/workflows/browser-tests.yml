@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.3/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.3/Node 14/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -36,7 +36,7 @@ jobs:
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup2:
-        name: "PHP 7.4/MySQL"
+        name: "PHP 7.4/Node 16/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -52,14 +52,14 @@ jobs:
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     regression-oss-setup3:
-        name: "PHP 8.2/MySQL"
+        name: "PHP 8.3/Node 18/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            php-image: "ghcr.io/ibexa/docker/php:8.2-node18"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
