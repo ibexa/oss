@@ -28,6 +28,7 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
             job-count: 2
@@ -38,7 +39,7 @@ jobs:
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
-        name: "PHP 8.3/Node 18/MySQL/Compatibility layer"
+        name: "PHP 8.3/Node 18/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -46,9 +47,9 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            use-compatibility-layer: true
             job-count: 2
             timeout: 60
         secrets:
@@ -65,6 +66,7 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/solr.yml:doc/docker/selenium.yml"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node18"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
