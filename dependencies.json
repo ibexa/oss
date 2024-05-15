@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-temp_1.3_to_4.6 as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/version-comparison",
+            "package": "ibexa/version-comparison",
+            "shouldBeAddedAsVCS": true
+        },
+        {
+            "requirement": "dev-temp_1.3_to_4.6 as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
