@@ -18,6 +18,12 @@
             "repositoryUrl": "https://github.com/ibexa/admin-ui",
             "package": "ibexa/admin-ui",
             "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-8140 as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/behat",
+            "package": "ibexa/behat",
+            "shouldBeAddedAsVCS": false
         }
     ]
 }
