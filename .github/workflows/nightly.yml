@@ -19,14 +19,11 @@ jobs:
                     - ibexa/commerce
                 branch:
                     - "3.3"
-                    - "4.5"
                     - "4.6"
                     - master
                 include:
                     - repository: ibexa/content
                       branch: "3.3"
-                    - repository: ibexa/content
-                      branch: "4.5"
                     - repository: ibexa/example-in-memory-product-catalog
                       branch: "4.6"
                     - repository: ibexa/example-in-memory-product-catalog
@@ -34,8 +31,6 @@ jobs:
                 exclude:
                     - repository: ibexa/headless
                       branch: "3.3"
-                    - repository: ibexa/headless
-                      branch: "4.5"
         steps:
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
