@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "https://api.github.com/repos/ibexa/recipes-dev/contents/index.json?ref=flex/pull-124",
+    "packages": [
+        {
+            "requirement": "dev-ibx-8356-removed-authenticatorinterface as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-8356-removed-authenticatorinterface as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/graphql",
+            "package": "ibexa/graphql",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
