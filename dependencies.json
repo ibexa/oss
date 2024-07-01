@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-8340_Not_possible_to_create_a_link_to_a_custom_route as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-richtext",
+            "package": "ibexa/fieldtype-richtext",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
