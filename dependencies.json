@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-test_branch as 2.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-admin-ui",
+            "package": "ezsystems/ezplatform-admin-ui",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
