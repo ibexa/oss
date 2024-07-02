@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-8350_fix_js_valiation_of_minimal_length_constrain_for_text_line_fields as 2.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-admin-ui",
+            "package": "ezsystems/ezplatform-admin-ui",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
