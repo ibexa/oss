@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-8258_richtext_Html5Input_is_not_washed_for_duplicate_IDs as 2.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-richtext",
+            "package": "ezsystems/ezplatform-richtext",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
