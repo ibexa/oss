@@ -56,7 +56,6 @@
         "lexik/jwt-authentication-bundle": "^2.10.5",
         "monolog/monolog": "^2.2",
         "overblog/graphiql-bundle": "^0.2.1",
-        "php-http/guzzle6-adapter": "^2.0.1",
         "platformsh/symfonyflex-bridge": "^2.4",
         "sensio/framework-extra-bundle": "^6.1.0",
         "twig/extra-bundle": "^3.1.1",
