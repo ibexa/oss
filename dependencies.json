@@ -2,7 +2,7 @@
     "recipesEndpoint": "",
     "packages": [
         {
-            "requirement": "dev-ibx-8180-swap-location-endpoint-OpenAPI as 5.0.x-dev",
+            "requirement": "dev-ibx-8175-move-user-group-endpoint-OpenAPI as 5.0.x-dev",
             "repositoryUrl": "https://github.com/ibexa/rest",
             "package": "ibexa/rest",
             "shouldBeAddedAsVCS": false
