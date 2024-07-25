@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-fix-virtual-fields as 1.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/ezplatform-kernel",
+            "package": "ezsystems/ezplatform-kernel",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
