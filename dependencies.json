@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-7894_missing_languages_and_old_api_version_deepl as 4.6.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/automated-translation",
+            "package": "ibexa/automated-translation",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
