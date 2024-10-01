@@ -15,6 +15,7 @@
         "ibexa/content-forms": "~5.0.x-dev",
         "ibexa/core": "~5.0.x-dev",
         "ibexa/core-persistence": "~5.0.x-dev",
+        "ibexa/core-search": "~5.0.x-dev",
         "ibexa/cron": "~5.0.x-dev",
         "ibexa/design-engine": "~5.0.x-dev",
         "ibexa/fieldtype-matrix": "~5.0.x-dev",
