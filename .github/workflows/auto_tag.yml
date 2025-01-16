@@ -19,7 +19,7 @@ on:
 
 jobs:
   preparation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     # This should allow parallel runs in a chain, e.g. OSS->Content->Experience->Commerce
     # whilst allowing Satis to process
     timeout-minutes: 30
@@ -74,7 +74,7 @@ jobs:
   
   action:
     needs: preparation
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     
     steps:
       - name: Install sponge
