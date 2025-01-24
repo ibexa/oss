@@ -19,7 +19,7 @@ on:
 
 jobs:
   preparation:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     # This should allow parallel runs in a chain, e.g. OSS->Content->Experience->Commerce
     # whilst allowing Satis to process
     timeout-minutes: 30
@@ -153,12 +153,12 @@ jobs:
       # if they exist, to update the values of the keys in the require object.
       - name: Patch composer require versions
         run: |
-          jq --argfile release release.json '
+          jq --slurpfile release <(cat release.json) '
             .require |= (
               to_entries | 
               map({
                 key: .key,
-                value: (if ($release[.key]) then $release[.key] else .value end)
+                value: (if ($release[0][.key]) then $release[0][.key] else .value end)
               }) | from_entries
             )
           ' composer.json > composer.tmp
