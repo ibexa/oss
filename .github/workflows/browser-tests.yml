@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
         inputs:
             send-success-notification:
-                description: 'Send a notification when the tests pass'     
+                description: 'Send a notification when the tests pass'
                 required: false
                 type: boolean
                 default: false
@@ -21,7 +21,7 @@ on:
 jobs:
     regression-oss-setup1:
         name: "PHP 8.3/Node 18/PostgreSQL/Varnish/Redis"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-8470-symfony-6
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -40,7 +40,7 @@ jobs:
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
         name: "PHP 8.3/Node 18/MySQL"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-8470-symfony-6
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -59,7 +59,7 @@ jobs:
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup3:
         name: "PHP 8.3/Node 18/MySQL/Solr"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-8470-symfony-6
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
