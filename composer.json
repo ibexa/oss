@@ -59,9 +59,6 @@
         "twig/extra-bundle": "^3.1.1",
         "doctrine/doctrine-bundle": "^2.4.2"
     },
-    "require-dev": {
-        "ibexa/ci-scripts": "^0.2@dev"
-    },
     "conflict": {
         "doctrine/doctrine-bundle": "2.6.3",
         "doctrine/persistence": "3.0.0",
