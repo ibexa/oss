@@ -1,0 +1,29 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-ibx-9513-fix-obsolete-controller-ref as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-9513-fix-ibexa-content-controller-ref as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-query",
+            "package": "ibexa/fieldtype-query",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-9513-fix-obsolete-controller-ref as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-richtext",
+            "package": "ibexa/fieldtype-richtext",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-9513-fix-obsolete-controller-ref as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/http-cache",
+            "package": "ibexa/http-cache",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
