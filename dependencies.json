@@ -1,0 +1,4 @@
+{
+    "recipesEndpoint": "https://api.github.com/repos/ibexa/recipes-dev/contents/index.json?ref=flex/pull-156",
+    "packages": []
+}
