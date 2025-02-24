@@ -3,12 +3,6 @@
     "packages": [
         {
             "requirement": "dev-sele-img-25-v5 as 5.0.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/admin-ui",
-            "package": "ibexa/admin-ui",
-            "shouldBeAddedAsVCS": false
-        },
-        {
-            "requirement": "dev-sele-img-25-v5 as 5.0.x-dev",
             "repositoryUrl": "https://github.com/ibexa/behat",
             "package": "ibexa/behat",
             "shouldBeAddedAsVCS": false
