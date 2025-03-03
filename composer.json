@@ -56,7 +56,7 @@
         "overblog/graphiql-bundle": "^0.3",
         "platformsh/symfonyflex-bridge": "^2.4",
         "twig/extra-bundle": "^3.1.1",
-        "doctrine/doctrine-bundle": "^2.4.2"
+        "doctrine/doctrine-bundle": "^2.11.0"
     },
     "conflict": {
         "doctrine/doctrine-bundle": "2.6.3",
