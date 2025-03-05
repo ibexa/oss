@@ -24,8 +24,6 @@ jobs:
                 include:
                     - repository: ibexa/content
                       branch: "3.3"
-                    - repository: ibexa/example-in-memory-product-catalog
-                      branch: "4.6"
                 exclude:
                     - repository: ibexa/headless
                       branch: "3.3"
