@@ -53,7 +53,7 @@
         "knplabs/knp-menu-bundle": "^3.1",
         "lexik/jwt-authentication-bundle": "^2.10.5",
         "monolog/monolog": "^2.2",
-        "overblog/graphiql-bundle": "^0.3",
+        "overblog/graphiql-bundle": "^1.0",
         "platformsh/symfonyflex-bridge": "^2.4",
         "twig/extra-bundle": "^3.1.1",
         "doctrine/doctrine-bundle": "^2.11.0"
