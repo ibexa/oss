@@ -23,7 +23,7 @@
         "ibexa/fieldtype-richtext": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
         "ibexa/graphql": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
         "ibexa/http-cache": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
-        "ibexa/i18n": "~5.0.x-dev",
+        "ibexa/i18n": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
         "ibexa/notifications": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
         "ibexa/post-install": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
         "ibexa/rest": "dev-ibx-8471-symfony-7 as 5.0.x-dev",
