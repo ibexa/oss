@@ -30,6 +30,7 @@
         "ibexa/search": "~4.6.x-dev",
         "ibexa/solr": "~4.6.x-dev",
         "ibexa/standard-design": "~4.6.x-dev",
+        "ibexa/twig-componenets": "~4.6.x-dev",
         "ibexa/user": "~4.6.x-dev",
         "symfony/asset": "^5.3.0",
         "symfony/cache": "^5.3.0",
