@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-gherkin-i18n as 8.3.x-dev",
+            "repositoryUrl": "https://github.com/ezsystems/BehatBundle",
+            "package": "ezsystems/behatbundle",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
