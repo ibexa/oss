@@ -69,7 +69,6 @@
         "symfony/framework-bundle": "5.3.14 || 5.4.3",
         "symfony/expression-language": "5.4.7",
         "symfony/webpack-encore-bundle": "1.14.0",
-        "friends-of-behat/mink-browserkit-driver": "1.6.2",
         "behat/mink-selenium2-driver": "1.7.0"
     },
     "extra": {
