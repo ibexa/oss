@@ -39,7 +39,7 @@ jobs:
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup2:
-        name: "PHP 8.0/Node 18/MariaDB 10.11/Compatibility layer"
+        name: "PHP 8.0/Node 20/MariaDB 10.11/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -52,14 +52,14 @@ jobs:
             use-compatibility-layer: true
             job-count: 2
             timeout: 60
-            php-image: "ghcr.io/ibexa/docker/php:8.0-node18"
+            php-image: "ghcr.io/ibexa/docker/php:8.0-node20"
         secrets:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
             AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
             AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
     regression-oss-setup3:
-        name: "PHP 8.3/Node 18/MySQL 8.4/Solr"
+        name: "PHP 8.3/Node 22/MySQL 8.4/Solr"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
@@ -67,7 +67,7 @@ jobs:
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
             setup: "doc/docker/base-dev.yml:doc/docker/db-mysql8.4.yml:doc/docker/solr.yml:doc/docker/selenium.yml"
-            php-image: "ghcr.io/ibexa/docker/php:8.3-node18"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node22"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
