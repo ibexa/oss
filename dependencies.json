@@ -3,8 +3,8 @@
     "packages": [
         {
             "requirement": "dev-ibx-8471-post-merge-fixes as 5.0.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/content-forms",
-            "package": "ibexa/content-forms",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui",
+            "package": "ibexa/admin-ui",
             "shouldBeAddedAsVCS": false
         }
     ]
