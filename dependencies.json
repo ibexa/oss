@@ -3,8 +3,8 @@
     "packages": [
         {
             "requirement": "dev-ibx-8471-post-merge-fixes as 5.0.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/http-cache",
-            "package": "ibexa/http-cache",
+            "repositoryUrl": "https://github.com/ibexa/content-forms",
+            "package": "ibexa/content-forms",
             "shouldBeAddedAsVCS": false
         }
     ]
