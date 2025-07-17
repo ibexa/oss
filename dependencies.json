@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-maint-behat-bump as 8.3.x-dev",
+            "repositoryUrl": "https://github.com/acoulton/BehatBundle",
+            "package": "ezsystems/behatbundle",
+            "shouldBeAddedAsVCS": true
+        }
+    ]
+}
