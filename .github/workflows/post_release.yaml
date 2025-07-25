@@ -37,7 +37,7 @@ jobs:
               repo: 'archive-maker',
               event_type: 'ibexa-product-release',
               client_payload: {
-                product: 'commerce',
+                product: '${{ github.event.repository.name }}',
                 version: '${{ steps.tag.outputs.version }}',
                 skeleton_version: '',
                 php_version: '8.3',
