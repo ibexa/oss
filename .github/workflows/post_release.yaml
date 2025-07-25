@@ -39,7 +39,7 @@ jobs:
               client_payload: {
                 product: '${{ github.event.repository.name }}',
                 version: '${{ steps.tag.outputs.version }}',
-                skeleton_version: '',
+                skeleton_version: '${{ steps.tag.outputs.version }}',
                 php_version: '8.3',
               }
             })
