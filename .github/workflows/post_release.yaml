@@ -7,39 +7,7 @@ on:
       - completed
 
 jobs:
-  trigger-archive-maker:
+  call-post-release:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Authenticate as GitHub app
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.AUTOMATION_CLIENT_ID }}
-          installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-          private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
-    
-      - name: Extract tag name
-        id: tag
-        run: |
-          TAG="${{ github.event.workflow_run.head_branch }}"
-          VERSION="${TAG#v}"  # Strip leading 'v' if present
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-
-      - name: Trigger archive-maker via repository_dispatch
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ steps.generate_token.outputs.token }}
-          script: |
-            await github.rest.repos.createDispatchEvent({
-              owner: 'ibexa',
-              repo: 'archive-maker',
-              event_type: 'ibexa-product-release',
-              client_payload: {
-                product: '${{ github.event.repository.name }}',
-                version: '${{ steps.tag.outputs.version }}',
-                skeleton_version: '${{ steps.tag.outputs.version }}',
-                php_version: '8.3',
-              }
-            })
+    uses: ibexa/gh-workflow/.github/workflows/post_release.yml@main
+    secrets: inherit
