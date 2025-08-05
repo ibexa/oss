@@ -1,0 +1,13 @@
+name: Post release
+
+on:
+  workflow_run:
+    workflows: ["Call Create Release for tag Workflow"]
+    types:
+      - completed
+
+jobs:
+  call-post-release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ibexa/gh-workflows/.github/workflows/post_release.yaml@main
+    secrets: inherit
