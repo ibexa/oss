@@ -2,7 +2,7 @@
     "recipesEndpoint": "",
     "packages": [
         {
-            "requirement": "dev-solr8-upgrade as 5.0.x-dev",
+            "requirement": "dev-solr8-ci-upgrade as 4.6.x-dev",
             "repositoryUrl": "https://github.com/ibexa/docker",
             "package": "ibexa/docker",
             "shouldBeAddedAsVCS": false
