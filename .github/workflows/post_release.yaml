@@ -10,4 +10,6 @@ jobs:
   call-post-release:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ibexa/gh-workflows/.github/workflows/post_release.yaml@main
+    with:
+      tag: ${{ github.event.workflow_run.head_branch }}
     secrets: inherit
