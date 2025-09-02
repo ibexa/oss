@@ -23,6 +23,7 @@ jobs:
         name: "PHP 8.3/Node 22/PostgreSQL 14.15/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
+            ci-scripts-branch: 'ibx-10493'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
@@ -42,6 +43,7 @@ jobs:
         name: "PHP 8.3/Node 22/MariaDB 10.11"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
+            ci-scripts-branch: 'ibx-10493'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
@@ -61,6 +63,7 @@ jobs:
         name: "PHP 8.3/Node 22/MySQL 8.4/Solr 8"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
+            ci-scripts-branch: 'ibx-10493'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
