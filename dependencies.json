@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-upgrade-test as 0.2.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/ci-scripts",
+            "package": "ibexa/ci-scripts",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
