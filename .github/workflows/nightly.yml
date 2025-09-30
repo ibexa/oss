@@ -28,6 +28,13 @@ jobs:
                     - repository: ibexa/headless
                       branch: "3.3"
         steps:
+            - name: Authenticate as GitHub app
+              id: generate_token
+              uses: tibdex/github-app-token@v1
+              with:
+                  app_id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+                  installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
+                  private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
               with:
@@ -37,4 +44,4 @@ jobs:
                   route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
                   inputs: '{ "send-success-notification": "false" }'
               env:
-                  GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
