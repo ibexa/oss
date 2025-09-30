@@ -28,13 +28,12 @@ jobs:
                     - repository: ibexa/headless
                       branch: "3.3"
         steps:
-            - name: Authenticate as GitHub app
+            - uses: actions/create-github-app-token@v2
               id: generate_token
-              uses: tibdex/github-app-token@v1
               with:
-                  app_id: ${{ secrets.AUTOMATION_CLIENT_ID }}
-                  installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-                  private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+                  app-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+                  private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+                  owner: ${{ github.repository_owner }}
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
               with:
