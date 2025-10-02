@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.4/Node 18/PostgreSQL 18 RC1/Varnish/Redis 7.2"
+        name: "PHP 7.4/Node 18/PostgreSQL 18.0/Varnish/Redis 7.2"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             ci-scripts-branch: 'ibx-10494'
