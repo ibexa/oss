@@ -33,11 +33,7 @@ jobs:
             php-image: "ghcr.io/ibexa/docker/php:7.4-node18"
             job-count: 2
             timeout: 60
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
-            AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-            AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+        secrets: inherit
     regression-oss-setup2:
         name: "PHP 8.0/Node 20/MariaDB 10.11/Compatibility layer"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
@@ -53,11 +49,7 @@ jobs:
             job-count: 2
             timeout: 60
             php-image: "ghcr.io/ibexa/docker/php:8.0-node20"
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
-            AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-            AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+        secrets: inherit
     regression-oss-setup3:
         name: "PHP 8.3/Node 22/MySQL 8.4/Solr 8"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
@@ -71,8 +63,4 @@ jobs:
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            AUTOMATION_CLIENT_ID: ${{ secrets.AUTOMATION_CLIENT_ID }}
-            AUTOMATION_CLIENT_INSTALLATION: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-            AUTOMATION_CLIENT_SECRET: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+        secrets: inherit
