@@ -33,8 +33,7 @@ jobs:
             php-image: "ghcr.io/ibexa/docker/php:7.3-node14"
             job-count: 2
             timeout: 60
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        secrets: inherit
     regression-oss-setup2:
         name: "PHP 7.4/Node 16/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
@@ -49,8 +48,7 @@ jobs:
             php-image: "ghcr.io/ibexa/docker/php:7.4-node16"
             job-count: 2
             timeout: 60
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        secrets: inherit
     regression-oss-setup3:
         name: "PHP 8.3/Node 18/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
@@ -63,5 +61,4 @@ jobs:
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        secrets: inherit
