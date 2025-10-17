@@ -13,6 +13,7 @@
         "ibexa/admin-ui": "~5.0.x-dev",
         "ibexa/admin-ui-assets": "~5.0.0@alpha",
         "ibexa/content-forms": "~5.0.x-dev",
+        "ibexa/cloud": "~5.0.x-dev",
         "ibexa/core": "~5.0.x-dev",
         "ibexa/core-persistence": "~5.0.x-dev",
         "ibexa/core-search": "~5.0.x-dev",
