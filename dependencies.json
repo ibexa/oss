@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-poc-spi-latest-v5 as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/docker",
+            "package": "ibexa/docker",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
