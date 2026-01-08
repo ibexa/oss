@@ -24,6 +24,7 @@
         "ibexa/graphql": "~5.0.x-dev",
         "ibexa/http-cache": "~5.0.x-dev",
         "ibexa/i18n": "~5.0.x-dev",
+        "ibexa/messenger": "~5.0.x-dev",
         "ibexa/notifications": "~5.0.x-dev",
         "ibexa/post-install": "~5.0.x-dev",
         "ibexa/rest": "~5.0.x-dev",
