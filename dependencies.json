@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-ibx-11107-added-messenger-package as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/oss",
+            "package": "ibexa/oss",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
