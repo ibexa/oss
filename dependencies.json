@@ -5,7 +5,7 @@
             "requirement": "dev-ibx-11107-added-messenger-package as 5.0.x-dev",
             "repositoryUrl": "https://github.com/ibexa/recipes-dev",
             "package": "ibexa/recipes-dev",
-            "shouldBeAddedAsVCS": false
+            "shouldBeAddedAsVCS": true
         }
     ]
 }
