@@ -35,14 +35,14 @@ jobs:
             timeout: 60
         secrets: inherit
     regression-oss-setup2:
-        name: "PHP 8.3/Node 22/MariaDB 11.4"
+        name: "PHP 8.3/Node 22/MariaDB 11.4/Valkey latest"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            setup: "doc/docker/base-dev.yml:doc/docker/db-mariadb11.4.yml:doc/docker/selenium.yml"
+            setup: "doc/docker/base-dev.yml:doc/docker/db-mariadb11.4.yml:doc/docker/valkey-latest.yml:doc/docker/selenium.yml"
             php-image: "ghcr.io/ibexa/docker/php:8.3-node22"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
@@ -50,14 +50,14 @@ jobs:
             timeout: 60
         secrets: inherit
     regression-oss-setup3:
-        name: "PHP 8.3/Node 22/MySQL 8.4/Solr 8"
+        name: "PHP 8.3/Node 22/MySQL 8.4/Solr 8/Redis latest"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            setup: "doc/docker/base-dev.yml:doc/docker/db-mysql8.4.yml:doc/docker/solr8.yml:doc/docker/selenium.yml"
+            setup: "doc/docker/base-dev.yml:doc/docker/db-mysql8.4.yml:doc/docker/solr8.yml:doc/docker/redis-latest.yml:doc/docker/selenium.yml"
             php-image: "ghcr.io/ibexa/docker/php:8.3-node22"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
