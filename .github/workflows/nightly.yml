@@ -13,19 +13,19 @@ jobs:
             max-parallel: 1
             matrix:
                 repository:
-                    - ibexa/oss
-                    - ibexa/headless
-                    - ibexa/experience
-                    - ibexa/commerce
+                    - oss
+                    - headless
+                    - experience
+                    - commerce
                 branch:
                     - "3.3"
                     - "4.6"
                     - master
                 include:
-                    - repository: ibexa/content
+                    - repository: content
                       branch: "3.3"
                 exclude:
-                    - repository: ibexa/headless
+                    - repository: headless
                       branch: "3.3"
         steps:
             - uses: actions/create-github-app-token@v2
@@ -37,11 +37,12 @@ jobs:
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
               with:
-                  route: POST /repos/{repo}/actions/workflows/{workflow_id}/dispatches
+                  route: POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
+                  owner: ${{ github.repository_owner }}
                   repo: ${{ matrix.repository }}
                   workflow_id: browser-tests.yml
                   ref: ${{ matrix.branch }}
                   inputs: |
-                    { "send-success-notification": "false" }
+                      { "send-success-notification": "false" }
               env:
                   GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
