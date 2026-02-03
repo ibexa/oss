@@ -37,10 +37,11 @@ jobs:
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
               with:
-                  repository: ${{ matrix.repository }}
-                  workflow: "browser-tests.yml"
-                  ref: "!!str ${{ matrix.branch }}"
-                  route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
-                  inputs: '{ "send-success-notification": "false" }'
+                  route: POST /repos/{repo}/actions/workflows/{workflow_id}/dispatches
+                  repo: ${{ matrix.repository }}
+                  workflow_id: browser-tests.yml
+                  ref: ${{ matrix.branch }}
+                  inputs: |
+                    { "send-success-notification": "false" }
               env:
                   GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
