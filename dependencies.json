@@ -2,12 +2,6 @@
     "recipesEndpoint": "",
     "packages": [
         {
-            "requirement": "dev-IBX-11179-PHP-8.4-certification-entity-manager-not-lazy as 4.6.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/core",
-            "package": "ibexa/core",
-            "shouldBeAddedAsVCS": false
-        },
-        {
             "requirement": "dev-ibx-11328-php-8.4 as 4.6.x-dev",
             "repositoryUrl": "https://github.com/ibexa/docker",
             "package": "ibexa/docker",
