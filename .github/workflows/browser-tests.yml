@@ -21,7 +21,7 @@ on:
 jobs:
     regression-oss-setup1:
         name: "PHP 7.4/Node 18/PostgreSQL 18.0/Varnish/Redis 7.2"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-11328
         with:
             ci-scripts-branch: 'ibx-11328-php-8.4'
             project-edition: "oss"
@@ -37,7 +37,7 @@ jobs:
         secrets: inherit
     regression-oss-setup2:
         name: "PHP 8.0/Node 20/MariaDB 11.4/Compatibility layer/Valkey latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-11328
         with:
             ci-scripts-branch: 'ibx-11328-php-8.4'
             project-edition: "oss"
@@ -54,7 +54,7 @@ jobs:
         secrets: inherit
     regression-oss-setup3:
         name: "PHP 8.4/Node 22/MySQL 8.4/Solr 8/Redis latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ibx-11328
         with:
             ci-scripts-branch: 'ibx-11328-php-8.4'
             project-edition: "oss"
