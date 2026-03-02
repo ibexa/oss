@@ -11,7 +11,13 @@
             "requirement": "dev-IBX-11332-link-c as 5.0.x-dev",
             "repositoryUrl": "https://github.com/ibexa/design-system-twig",
             "package": "ibexa/design-system-twig",
+            "shouldBeAddedAsVCS": true
+        },
+        {
+            "requirement": "dev-IBX-11236-use-ds-btn-component as dev-5.0-next",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui-assets",
+            "package": "ibexa/admin-ui-assets",
             "shouldBeAddedAsVCS": false
         }
     ]
-}
+} 
