@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "https://api.github.com/repos/ibexa/recipes-dev/contents/index.json?ref=flex/pull-229",
+    "packages": [
+        {
+            "requirement": "dev-ibx-11107-added-messenger-package as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/installer",
+            "package": "ibexa/installer",
+            "shouldBeAddedAsVCS": true
+        },
+        {
+            "requirement": "dev-ibx-11107-added-messenger-package as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/oss",
+            "package": "ibexa/oss",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
