@@ -6,12 +6,6 @@
             "repositoryUrl": "https://github.com/ibexa/behat",
             "package": "ibexa/behat",
             "shouldBeAddedAsVCS": false
-        },
-        {
-            "requirement": "dev-ibx-11328 as 4.6.x-dev",
-            "repositoryUrl": "https://github.com/ibexa/admin-ui",
-            "package": "ibexa/admin-ui",
-            "shouldBeAddedAsVCS": false
         }
     ]
 }
