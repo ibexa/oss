@@ -2,7 +2,7 @@
     "recipesEndpoint": "",
     "packages": [
         {
-            "requirement": "dev-ibx-11328-ci-matrix as 4.6.x-dev",
+            "requirement": "dev-ibx-11328-ci as 4.6.x-dev",
             "repositoryUrl": "https://github.com/ibexa/behat",
             "package": "ibexa/behat",
             "shouldBeAddedAsVCS": false
