@@ -1,8 +1,8 @@
 name: Nightly browser tests
 on:
     schedule:
-        # Run tests every night
-        - cron: "45 21 * * *"
+        # Run tests every morning
+        - cron: "0 6 * * *"
     workflow_dispatch: ~
 
 jobs:
