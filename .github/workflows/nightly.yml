@@ -14,22 +14,27 @@ jobs:
             matrix:
                 repository:
                     - ibexa/oss
-                    - ibexa/content
+                    - ibexa/headless
                     - ibexa/experience
                     - ibexa/commerce
                 branch:
                     - "3.3"
-                    - "4.5"
-                    - master
+                    - "4.6"
+                    - "5.0"
+                    - "6.0"
                 include:
-                    - repository: ibexa/headless
-                      branch: master
-                    - repository: ibexa/example-in-memory-product-catalog
-                      branch: main
-                exclude:
                     - repository: ibexa/content
-                      branch: master
+                      branch: "3.3"
+                exclude:
+                    - repository: ibexa/headless
+                      branch: "3.3"
         steps:
+            - uses: actions/create-github-app-token@v2
+              id: generate_token
+              with:
+                  app-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+                  private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+                  owner: ${{ github.repository_owner }}
             - uses: octokit/request-action@v2.x
               name: Trigger workflow
               with:
@@ -39,4 +44,4 @@ jobs:
                   route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
                   inputs: '{ "send-success-notification": "false" }'
               env:
-                  GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
