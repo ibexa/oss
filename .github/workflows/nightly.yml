@@ -20,7 +20,8 @@ jobs:
                 branch:
                     - "3.3"
                     - "4.6"
-                    - master
+                    - "5.0"
+                    - "6.0"
                 include:
                     - repository: ibexa/content
                       branch: "3.3"
