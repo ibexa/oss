@@ -20,7 +20,7 @@ on:
 
 jobs:
     regression-oss-setup1:
-        name: "PHP 7.3/Node 18/PostgreSQL/Varnish/Redis"
+        name: "PHP 7.3/Node 20/PostgreSQL/Varnish/Redis"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             ci-scripts-branch: 'ibx-11797-v3.3'
@@ -31,12 +31,12 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/db-postgresql.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ghcr.io/ibexa/docker/php:7.3-node18"
+            php-image: "ghcr.io/ibexa/docker/php:7.3-node20"
             job-count: 2
             timeout: 60
         secrets: inherit
     regression-oss-setup2:
-        name: "PHP 7.4/Node 18/MySQL"
+        name: "PHP 7.4/Node 20/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             ci-scripts-branch: 'ibx-11797-v3.3'
@@ -47,12 +47,12 @@ jobs:
             setup: "doc/docker/base-dev.yml:doc/docker/selenium.yml"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
-            php-image: "ghcr.io/ibexa/docker/php:7.4-node18"
+            php-image: "ghcr.io/ibexa/docker/php:7.4-node20"
             job-count: 2
             timeout: 60
         secrets: inherit
     regression-oss-setup3:
-        name: "PHP 8.3/Node 22/MySQL"
+        name: "PHP 8.3/Node 20/MySQL"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             ci-scripts-branch: 'ibx-11797-v3.3'
@@ -60,7 +60,7 @@ jobs:
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
             test-setup-phase-1: "--profile=regression --suite=setup-oss --mode=standard"
-            php-image: "ghcr.io/ibexa/docker/php:8.3-node22"
+            php-image: "ghcr.io/ibexa/docker/php:8.3-node20"
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
             timeout: 60
