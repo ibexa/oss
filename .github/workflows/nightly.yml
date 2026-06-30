@@ -18,16 +18,9 @@ jobs:
                     - ibexa/experience
                     - ibexa/commerce
                 branch:
-                    - "3.3"
                     - "4.6"
                     - "5.0"
                     - "6.0"
-                include:
-                    - repository: ibexa/content
-                      branch: "3.3"
-                exclude:
-                    - repository: ibexa/headless
-                      branch: "3.3"
         steps:
             - uses: actions/create-github-app-token@v3
               id: generate_token
