@@ -146,13 +146,14 @@ jobs:
       - name: Commit, tag and push
         if: inputs.real_op
         env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
           GIT_PUSH_ARGS: ${{ inputs.git_push_args }}
-          ROBOT_TOKEN: ${{ secrets.EZROBOT_PAT }}
+          VERSION: ${{ inputs.version }}
         run: |
-          git config --local user.email "681611+ezrobot@users.noreply.github.com"
-          git config --local user.name "ezrobot"
-          git remote set-url origin https://x-access-token:${{ env.ROBOT_TOKEN }}@github.com/${{ github.repository }}
+          gh auth setup-git
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add composer.*
-          git commit -m "[composer] Set dependencies for ${{ inputs.version }} release + .lock"
-          git tag "v${{ inputs.version }}"
-          git push origin "v${{ inputs.version }}" ${GIT_PUSH_ARGS}
+          git commit -m "[composer] Set dependencies for ${VERSION} release + .lock"
+          git tag "v${VERSION}"
+          git push origin "v${VERSION}" ${GIT_PUSH_ARGS}
