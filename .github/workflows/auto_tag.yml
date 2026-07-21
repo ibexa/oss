@@ -19,69 +19,29 @@ on:
 
 jobs:
   preparation:
-    runs-on: ubuntu-latest
-    # This should allow parallel runs in a chain, e.g. OSS->Content->Experience->Commerce
+    runs-on: ubuntu-26.04
+    # This should allow parallel runs in a chain, e.g. OSS->Headless->Experience->Commerce
     # whilst allowing Satis to process
     timeout-minutes: 30
 
     steps:
       - name: Generate token
         id: generate_token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
-          app-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+          client-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
           private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
           owner: ${{ github.repository_owner }}
 
       - name: Check for admin-ui-assets tag
-        uses: octokit/request-action@v2.x
-        with:
-          owner: ibexa
-          repo: admin-ui-assets
-          route: /repos/{owner}/{repo}/contents/package.json?ref=v${{ inputs.version }}
+        shell: bash
+        run: gh api "/repos/ibexa/admin-ui-assets/contents/package.json?ref=v${{ inputs.version }}" >/dev/null
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
 
-      # The jq command would return a zero exit status if it was able to filter the input JSON data and
-      # produce at least one matching object in the array, and a non-zero exit status if no matching object was found.
-      # This particular JQ filter expression:
-      # .packages."${{ env.PARENT }}"[]: accesses an array of objects in the packages object, with the key specified by the environment variable PARENT.
-      # select(.version == "${{ env.V_VERSION }}"): filters the array to only include objects where the version property is equal to the value of the environment variable V_VERSION.
-
-      # No need to validate for oss version in satis
-      - name: Validate satis for content version
-        if: github.event.repository.name == 'experience'
-        env:
-          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
-          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
-          PARENT: ibexa/content
-          V_VERSION: v${{ inputs.version }}
-        run: |
-          for EXPONENTIAL_BACKOFF in {1..10}; do
-          curl https://updates.ibexa.co/p2/${PARENT}.json -s -u $SATIS_NETWORK_KEY:$SATIS_NETWORK_TOKEN | jq -e '.packages."${{ env.PARENT }}"[] | select(.version == "${{ env.V_VERSION }}")' && break;
-            DELAY=$((2**$EXPONENTIAL_BACKOFF))
-            echo "${PARENT}:${V_VERSION} not yet available, sleeping for $DELAY seconds"
-            sleep $DELAY
-          done
-
-      - name: Validate satis for experience version
-        if: github.event.repository.name == 'commerce'
-        env:
-          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
-          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
-          PARENT: ibexa/experience
-          V_VERSION: v${{ inputs.version }}
-        run: |
-          for EXPONENTIAL_BACKOFF in {1..10}; do
-          curl https://updates.ibexa.co/p2/${PARENT}.json -s -u $SATIS_NETWORK_KEY:$SATIS_NETWORK_TOKEN | jq -e '.packages."${{ env.PARENT }}"[] | select(.version == "${{ env.V_VERSION }}")' && break;
-            DELAY=$((2**$EXPONENTIAL_BACKOFF))
-            echo "${PARENT}:${V_VERSION} not yet available, sleeping for $DELAY seconds"
-            sleep $DELAY
-          done
-  
   action:
     needs: preparation
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-26.04
     
     steps:
       - name: Install sponge
@@ -94,27 +54,29 @@ jobs:
           php-version: 8.3
           coverage: none
           extensions: pdo_sqlite, gd
-          tools: cs2pr
 
       - name: Generate token
         id: generate_token
-        uses: tibdex/github-app-token@v1
+        uses: actions/create-github-app-token@v3
         with:
-          app_id: ${{ secrets.AUTOMATION_CLIENT_ID }}
-          installation_id: ${{ secrets.AUTOMATION_CLIENT_INSTALLATION }}
-          private_key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+          client-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+          private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+          owner: ${{ github.repository_owner }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
       - name: Get release information
-        uses: octokit/request-action@v2.x
         id: release
-        with:
-          owner: ibexa
-          repo: release-maker
-          route: /repos/{owner}/{repo}/contents/releases/${{ inputs.version }}/release.json
+        shell: bash
+        run: |
+          response=$(gh api "/repos/ibexa/release-maker/contents/releases/${{ inputs.version }}/release.json")
+          {
+            echo 'data<<EOF'
+            echo "$response"
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
 
@@ -144,17 +106,7 @@ jobs:
           esac;
 
       - name: Patch parent version for OSS
-        if: github.event.repository.name == 'oss'
         run: jq '.require["ibexa/admin-ui-assets"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
-      - name: Patch parent version for Content
-        if: github.event.repository.name == 'content'
-        run: jq '.require["ibexa/oss"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
-      - name: Patch parent version for Experience
-        if: github.event.repository.name == 'experience'
-        run: jq '.require["ibexa/content"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
-      - name: Patch parent version for Commerce
-        if: github.event.repository.name == 'commerce'
-        run: jq '.require["ibexa/experience"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
 
       # The effect of this jq command is to modify the require property of the input JSON object by using values from the $release object,
       # if they exist, to update the values of the keys in the require object.
