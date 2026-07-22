@@ -20,140 +20,31 @@ on:
 jobs:
   preparation:
     runs-on: ubuntu-26.04
-    # This should allow parallel runs in a chain, e.g. OSS->Headless->Experience->Commerce
-    # whilst allowing Satis to process
-    timeout-minutes: 30
 
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: actions/create-github-app-token@v3
+      - name: Check for admin-ui-assets package
+        uses: ibexa/gh-workflows/actions/check-composer-package@main
         with:
-          client-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
-          private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
-          owner: ${{ github.repository_owner }}
-
-      - name: Check for admin-ui-assets tag
-        shell: bash
-        run: gh api "/repos/ibexa/admin-ui-assets/contents/package.json?ref=v${{ inputs.version }}" >/dev/null
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          package: ibexa/admin-ui-assets
+          version: v${{ inputs.version }}
 
   action:
     needs: preparation
     runs-on: ubuntu-26.04
-    
+
     steps:
-      - name: Install sponge
-        run: |
-          sudo apt-get install -y moreutils
-
-      - name: Setup PHP Action
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.3
-          coverage: none
-          extensions: pdo_sqlite, gd
-
-      - name: Generate token
-        id: generate_token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
-          private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
-          owner: ${{ github.repository_owner }}
-
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
-      - name: Get release information
-        id: release
-        shell: bash
-        run: |
-          response=$(gh api "/repos/ibexa/release-maker/contents/releases/${{ inputs.version }}/release.json")
-          {
-            echo 'data<<EOF'
-            echo "$response"
-            echo EOF
-          } >> "$GITHUB_OUTPUT"
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-
-      # The effect of this jq command is to take a JSON array of objects,
-      # transform each object into a new object using its packageName and targetVersion properties,
-      # and return the result as a single JSON object.
-      # The sponge command is used to pipe the output of jq back into the same file, effectively replacing its contents with the updated JSON data.
-      - name: Process release information
-        run: |
-          cat > input.json <<'EOF'
-          ${{ steps.release.outputs.data }}
-          EOF
-          jq -r '.["content"]' input.json | base64 --decode | jq -c . > release.json
-          jq -s '[ .[][] | { (.packageName): (.targetVersion) } ] | add' release.json | sponge release.json
-
-      - name: Set minimum stability
-        run: |
-          VERSION=$( echo ${{ inputs.version }} | cut -d '-' -f 2 )
-          SET_STABILITY="composer config minimum-stability"
-          $SET_STABILITY --unset
-          composer config prefer-stable --unset
-          case $VERSION in
-            alpha*|beta*|rc*) composer config prefer-stable true ;;&
-            alpha*) $SET_STABILITY alpha ;;
-            beta*) $SET_STABILITY beta ;;
-            rc*) $SET_STABILITY rc ;;
-          esac;
-
-      - name: Patch parent version for OSS
-        run: jq '.require["ibexa/admin-ui-assets"] |= "${{ inputs.version }}"' composer.json | sponge composer.json
-
-      # The effect of this jq command is to modify the require property of the input JSON object by using values from the $release object,
-      # if they exist, to update the values of the keys in the require object.
-      - name: Patch composer require versions
-        run: |
-          jq --slurpfile release <(cat release.json) '
-            .require |= (
-              to_entries | 
-              map({
-                key: .key,
-                value: (if ($release[0][.key]) then $release[0][.key] else .value end)
-              }) | from_entries
-            )
-          ' composer.json > composer.tmp
-          mv composer.tmp composer.json
-
-      - name: Reformat composer.json
-        run: cat composer.json | unexpand -t2 | expand -t4 | sponge composer.json
-
-      - name: Preview composer.json
-        run: cat composer.json
-
-      - name: Add composer keys for private packagist
-        run: |
-          composer config http-basic.updates.ibexa.co $SATIS_NETWORK_KEY $SATIS_NETWORK_TOKEN
-          composer config github-oauth.github.com $APP_GITHUB_TOKEN
-        env:
-          SATIS_NETWORK_KEY: ${{ secrets.SATIS_NETWORK_KEY }}
-          SATIS_NETWORK_TOKEN: ${{ secrets.SATIS_NETWORK_TOKEN }}
-          APP_GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-
-      - name: Composer update
-        run: |
-          composer update --no-scripts --no-plugins --no-install
-          composer validate
-
-      - name: Commit, tag and push
-        if: inputs.real_op
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          GIT_PUSH_ARGS: ${{ inputs.git_push_args }}
-          VERSION: ${{ inputs.version }}
-        run: |
-          gh auth setup-git
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add composer.*
-          git commit -m "[composer] Set dependencies for ${VERSION} release + .lock"
-          git tag "v${VERSION}"
-          git push origin "v${VERSION}" ${GIT_PUSH_ARGS}
+      - name: Set dependency versions, commit, tag and push
+        uses: ibexa/gh-workflows/actions/create-metapackage-tag@main
+        with:
+          version: ${{ inputs.version }}
+          pin-packages: ibexa/admin-ui-assets
+          real-op: ${{ inputs.real_op }}
+          git-push-args: ${{ inputs.git_push_args }}
+          gh-client-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+          gh-client-secret: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+          satis-network-key: ${{ secrets.SATIS_NETWORK_KEY }}
+          satis-network-token: ${{ secrets.SATIS_NETWORK_TOKEN }}
