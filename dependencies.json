@@ -5,7 +5,7 @@
             "requirement": "dev-merge-up/4.6-to-5.0 as 5.0.x-dev",
             "repositoryUrl": "https://github.com/ibexa/fieldtype-richtext",
             "package": "ibexa/fieldtype-richtext",
-            "shouldBeAddedAsVCS": false
+            "shouldBeAddedAsVCS": true
         }
     ]
 }
