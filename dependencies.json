@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-ibx-12153-doing-right-thing as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core-03d0cff5",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": true
+        }
+    ]
+}
