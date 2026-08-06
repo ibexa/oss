@@ -20,6 +20,8 @@ on:
 jobs:
   preparation:
     runs-on: ubuntu-26.04
+    # This should allow parallel runs in a chain, e.g. OSS->Headless->Experience->Commerce
+    timeout-minutes: 30
 
     steps:
       - name: Check for admin-ui-assets package
