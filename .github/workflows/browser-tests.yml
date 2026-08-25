@@ -21,8 +21,9 @@ on:
 jobs:
     regression-oss-setup1:
         name: "PHP 7.4/Node 20/PostgreSQL 18.0/Varnish/Redis 7.2"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@IBX-11919-encore-prod-on-ci
         with:
+            ci-scripts-branch: 'IBX-11919-encore-prod-on-ci'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
@@ -36,8 +37,9 @@ jobs:
         secrets: inherit
     regression-oss-setup2:
         name: "PHP 8.0/Node 20/MariaDB 11.4/Compatibility layer/Valkey latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@IBX-11919-encore-prod-on-ci
         with:
+            ci-scripts-branch: 'IBX-11919-encore-prod-on-ci'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
@@ -52,8 +54,9 @@ jobs:
         secrets: inherit
     regression-oss-setup3:
         name: "PHP 8.4/Node 22/MySQL 8.4/Solr 8/Redis latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@IBX-11919-encore-prod-on-ci
         with:
+            ci-scripts-branch: 'IBX-11919-encore-prod-on-ci'
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
             test-suite: "--profile=regression --suite=oss"
