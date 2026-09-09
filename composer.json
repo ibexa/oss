@@ -31,6 +31,7 @@
         "ibexa/search": "~6.0.x-dev",
         "ibexa/solr": "~6.0.x-dev",
         "ibexa/standard-design": "~6.0.x-dev",
+        "ibexa/translations": "~6.0.x-dev",
         "ibexa/twig-components": "~6.0.x-dev",
         "ibexa/user": "~6.0.x-dev",
         "symfony/asset": "^7.4",
