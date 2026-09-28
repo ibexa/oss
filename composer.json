@@ -43,7 +43,7 @@
         "symfony/form": "^7.4 || ^8.1",
         "symfony/framework-bundle": "^7.4 || ^8.1",
         "symfony/mailer": "^7.4 || ^8.1",
-        "symfony/monolog-bundle": "^3.6.0",
+        "symfony/monolog-bundle": "^3.6.0 || ^4.0",
         "symfony/process": "^7.4 || ^8.1",
         "symfony/security-bundle": "^7.4 || ^8.1",
         "symfony/serializer-pack": "^1.0",
