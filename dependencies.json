@@ -1,0 +1,161 @@
+{
+    "recipesEndpoint": "https://api.github.com/repos/ibexa/recipes-dev/contents/index.json?ref=flex/pull-268",
+    "packages": [
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui",
+            "package": "ibexa/admin-ui",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as dev-6.0-next",
+            "repositoryUrl": "https://github.com/ibexa/admin-ui-assets",
+            "package": "ibexa/admin-ui-assets",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/behat",
+            "package": "ibexa/behat",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/content-forms",
+            "package": "ibexa/content-forms",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core",
+            "package": "ibexa/core",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core-persistence",
+            "package": "ibexa/core-persistence",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/core-search",
+            "package": "ibexa/core-search",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/cron",
+            "package": "ibexa/cron",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/design-engine",
+            "package": "ibexa/design-engine",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/design-system-twig",
+            "package": "ibexa/design-system-twig",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/doctrine-schema",
+            "package": "ibexa/doctrine-schema",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-matrix",
+            "package": "ibexa/fieldtype-matrix",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-query",
+            "package": "ibexa/fieldtype-query",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/fieldtype-richtext",
+            "package": "ibexa/fieldtype-richtext",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/graphql",
+            "package": "ibexa/graphql",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/http-cache",
+            "package": "ibexa/http-cache",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/messenger",
+            "package": "ibexa/messenger",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/notifications",
+            "package": "ibexa/notifications",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/post-install",
+            "package": "ibexa/post-install",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/rest",
+            "package": "ibexa/rest",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/search",
+            "package": "ibexa/search",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/solr",
+            "package": "ibexa/solr",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/standard-design",
+            "package": "ibexa/standard-design",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/translations",
+            "package": "ibexa/translations",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/twig-components",
+            "package": "ibexa/twig-components",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-IBX-12046-symfony-8-dual as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/user",
+            "package": "ibexa/user",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
