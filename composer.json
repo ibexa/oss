@@ -4,7 +4,7 @@
     "license": "(GPL-2.0-only or proprietary)",
     "description": "A meta package for installing Ibexa Open Source",
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-migrations-bundle": "^3.0",
