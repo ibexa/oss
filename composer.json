@@ -12,6 +12,7 @@
         "ibexa/system-info": "~6.0.x-dev",
         "ibexa/admin-ui": "~6.0.x-dev",
         "ibexa/admin-ui-assets": "dev-6.0-next",
+        "ibexa/api-platform": "~6.0.x-dev",
         "ibexa/content-forms": "~6.0.x-dev",
         "ibexa/core": "~6.0.x-dev",
         "ibexa/core-persistence": "~6.0.x-dev",
