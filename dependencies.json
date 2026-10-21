@@ -1,4 +1,5 @@
 {
+  "recipesEndpoint": "",
   "packages": [
     {
       "package": "ibexa/docker",
