@@ -1,0 +1,17 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-ibx-12271-solr-10.0 as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/solr",
+            "package": "ibexa/solr",
+            "shouldBeAddedAsVCS": false
+        },
+        {
+            "requirement": "dev-ibx-12271-solr10-setup as 6.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/docker",
+            "package": "ibexa/docker",
+            "shouldBeAddedAsVCS": false
+        }
+    ]
+}
