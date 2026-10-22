@@ -16,12 +16,13 @@ on:
         branches:
             - master
             - "[0-9]+.[0-9]+"
+            - ci-optimizations
     pull_request: ~
 
 jobs:
     regression-oss-setup1:
         name: "PHP 8.5/Node 22/PostgreSQL 18.0/Varnish/Redis 7.2"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ci-optimizations
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -32,11 +33,12 @@ jobs:
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
             job-count: 2
+            process-count: 2
             timeout: 60
         secrets: inherit
     regression-oss-setup2:
         name: "PHP 8.5/Node 22/MariaDB 11.4/Valkey latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ci-optimizations
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -47,11 +49,12 @@ jobs:
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             multirepository: true
             job-count: 2
+            process-count: 2
             timeout: 60
         secrets: inherit
     regression-oss-setup3:
         name: "PHP 8.5/Node 22/MySQL 8.4/Solr 8/Redis latest"
-        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
+        uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@ci-optimizations
         with:
             project-edition: "oss"
             project-version: ${{ github.event.inputs.project-version }}
@@ -61,5 +64,6 @@ jobs:
             php-image: 'ghcr.io/ibexa/docker/php:8.5-node22'
             send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
             job-count: 2
+            process-count: 1
             timeout: 60
         secrets: inherit
