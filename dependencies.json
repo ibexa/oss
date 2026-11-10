@@ -1,0 +1,17 @@
+{
+  "recipesEndpoint": "",
+  "packages": [
+    {
+      "package": "ibexa/docker",
+      "requirement": "dev-ci-optimizations as 6.0.x-dev",
+      "repositoryUrl": "https://github.com/ibexa/docker",
+      "shouldBeAddedAsVCS": true
+    },
+    {
+      "package": "ibexa/behat",
+      "requirement": "dev-ci-optimizations as 6.0.x-dev",
+      "repositoryUrl": "https://github.com/ibexa/behat",
+      "shouldBeAddedAsVCS": true
+    }
+  ]
+}
