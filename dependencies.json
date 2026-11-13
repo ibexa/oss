@@ -1,0 +1,11 @@
+{
+    "recipesEndpoint": "",
+    "packages": [
+        {
+            "requirement": "dev-IBX-13119-Content-with-an-empty-optional-image-asset-field-cannot-be-published-in-OSS-404 as 5.0.x-dev",
+            "repositoryUrl": "https://github.com/ibexa/content-forms",
+            "package": "ibexa/content-forms",
+            "shouldBeAddedAsVCS": true
+        }
+    ]
+}
